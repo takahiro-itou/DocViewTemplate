@@ -65,7 +65,8 @@ dnl
 m4_include([.M4/ConfigDirectory.m4])
 
 MYAC_CUSTOMIZE_LIBRARY_DIR([Lib])
-MYAC_CUSTOMIZE_INCLUDE_DIR([Include], [Sample])
+MYAC_CUSTOMIZE_INCLUDE_DIR(
+    [Include], [Sample], [.Config], [Config.h])
 
 dnl----------------------------------------------------------------
 dnl
