@@ -52,12 +52,32 @@ configure_file(
     "${INCLUDE_SOURCE_DIR}/.Config/ConfiguredSample.h.in"
     "${INCLUDE_BINARY_DIR}/.Config/ConfiguredSample.h")
 
+configure_file(
+    "${INCLUDE_SOURCE_DIR}/.Config/Config.h.cmake.in"
+    "${INCLUDE_BINARY_DIR}/.Config/.${PROJECT_NAME}.Config.h"
+)
+
 ##
 ##    インクルードパスの設定。
 ##
 
 include_directories("${PROJECT_SOURCE_DIR}/Include")
 include_directories("${PROJECT_BINARY_DIR}/Include")
+
+##----------------------------------------------------------------
+##
+##    パッケージコンフィグレーション。
+##
+
+configure_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}Config.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
+    @ONLY
+)
+
+install(FILES   "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
+        DESTINATION  .
+)
 
 ##----------------------------------------------------------------
 ##
