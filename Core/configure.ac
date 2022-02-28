@@ -79,7 +79,6 @@ dnl
 dnl   Check Programs.
 dnl
 
-AC_LANG_CPLUSPLUS
 AC_PROG_CC
 AC_PROG_CXX
 AM_PROG_AS
@@ -100,6 +99,10 @@ dnl
 dnl
 dnl   Check Extra Compiler/Linker Options.
 dnl
+
+m4_include([.M4/CheckExtraFlags.m4])
+
+m4_include([.M4/EnableCxx11.m4])
 
 dnl----------------------------------------------------------------
 dnl
