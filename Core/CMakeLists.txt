@@ -34,9 +34,22 @@ set(PACKAGE_INCLUDE_DIR     "${INCTOP_DIR_NAME}/${INCPKG_DIR_NAME}")
 
 set(INCTOP_SOURCE_DIR       "${PROJECT_SOURCE_DIR}/${INCTOP_DIR_NAME}")
 set(INCTOP_BINARY_DIR       "${PROJECT_BINARY_DIR}/${INCTOP_DIR_NAME}")
+set(LIBTOP_SOURCE_DIR       "${PROJECT_SOURCE_DIR}/${LIBTOP_DIR_NAME}")
+set(LIBTOP_BINARY_DIR       "${PROJECT_BINARY_DIR}/${LIBTOP_DIR_NAME}")
 
 set(INCLUDE_SOURCE_DIR      "${INCTOP_SOURCE_DIR}/${INCPKG_DIR_NAME}")
 set(INCLUDE_BINARY_DIR      "${INCTOP_BINARY_DIR}/${INCPKG_DIR_NAME}")
+
+##----------------------------------------------------------------
+##
+##    ビルド環境の検査。
+##
+
+Include (${COMMON_CMAKE_DIR}/EnableCxx11.cmake)
+
+Include (${COMMON_CMAKE_DIR}/CheckConstExpr.cmake)
+Include (${COMMON_CMAKE_DIR}/CheckNullPtr.cmake)
+Include (${COMMON_CMAKE_DIR}/CheckOverride.cmake)
 
 ##
 ##    Project Name Space.
@@ -44,6 +57,7 @@ set(INCLUDE_BINARY_DIR      "${INCTOP_BINARY_DIR}/${INCPKG_DIR_NAME}")
 
 set(SAMPLE_CNF_NAMESPACE    Sample)
 
+##----------------------------------------------------------------
 ##
 ##    設定を書き込んだファイルを生成。
 ##
