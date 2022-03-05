@@ -9,7 +9,7 @@ set(MODULE_OUTPUT_NAME      "Common")
 set(MODULE_TITLE            "Common")
 
 set(INCLIB_SOURCE_DIR       "${INCLUDE_SOURCE_DIR}/${MODULE_DIR_NAME}")
-set(INCLIB_BINARY_DIR     "  ${INCLUDE_BINARY_DIR}/${MODULE_DIR_NAME}")
+set(INCLIB_BINARY_DIR       "${INCLUDE_BINARY_DIR}/${MODULE_DIR_NAME}")
 
 ##----------------------------------------------------------------
 ##
@@ -28,5 +28,11 @@ set(INCLIB_HEADER_FILES
 ##    ビルドとインストールの設定。
 ##
 
-include(${COMMON_CMAKE_DIR}/BuildLibraryCommon.cmake)
+Include (${COMMON_CMAKE_DIR}/BuildLibraryCommon.cmake)
 
+##----------------------------------------------------------------
+##
+##    テストの設定。
+##
+
+add_subdirectory(Tests)
