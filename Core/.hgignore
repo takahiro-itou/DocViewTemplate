@@ -13,3 +13,6 @@ Config\.h\.in$
 ^configure$
 ^docs$
 
+^Lib/.*/Tests/CMakeLists.txt
+^Lib/.*/Tests/Makefile.am
+
