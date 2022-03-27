@@ -118,7 +118,11 @@ m4_include([.M4/WithExtLibs.m4])
 
 MYAC_WITH_EXT_LIB(
     [CPPUNIT],  [cppunit],  [Path to cppunit],  [yes],
-    [AMCNF_CPPUNIT_ENABLED])
+    [AMCNF_CPPUNIT_ENABLED],dnl
+)
+MYAC_SET_EXT_LIB_OPTIONS(
+    [CPPUNIT], [cppunit], [lib], [include], [bin],dnl
+)
 
 dnl----------------------------------------------------------------
 dnl
