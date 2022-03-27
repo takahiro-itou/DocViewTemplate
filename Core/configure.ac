@@ -114,13 +114,13 @@ dnl   Additional Packages.
 dnl   外部パッケージの追加
 dnl
 
-m4_include([.M4/WithExtLibs.m4])
+m4_include([.M4/WithExtPkgs.m4])
 
-MYAC_WITH_EXT_LIB(
+MYAC_WITH_EXT_PKG(
     [CPPUNIT],  [cppunit],  [Path to cppunit],  [yes],
     [AMCNF_CPPUNIT_ENABLED],dnl
 )
-MYAC_SET_EXT_LIB_OPTIONS(
+MYAC_SET_EXT_PKG_OPTIONS(
     [CPPUNIT], [cppunit], [lib], [include], [bin],dnl
 )
 
