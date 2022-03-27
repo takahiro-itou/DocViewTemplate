@@ -25,6 +25,8 @@ project(${PROJECT_NAME}     VERSION  1.0.0)
 ##    プロジェクトの基本設定。
 ##
 
+enable_testing ()
+
 set(COMMON_CMAKE_DIR        "${PROJECT_SOURCE_DIR}/.CMake")
 set(INCTOP_DIR_NAME         "Include")
 set(BINTOP_DIR_NAME         "Bin")
@@ -59,24 +61,32 @@ set(SAMPLE_CNF_NAMESPACE    Sample)
 
 ##----------------------------------------------------------------
 ##
-##    設定を書き込んだファイルを生成。
-##
-
-configure_file(
-    "${INCLUDE_SOURCE_DIR}/.Config/ConfiguredSample.h.in"
-    "${INCLUDE_BINARY_DIR}/.Config/ConfiguredSample.h")
-
-configure_file(
-    "${INCLUDE_SOURCE_DIR}/.Config/Config.h.cmake.in"
-    "${INCLUDE_BINARY_DIR}/.Config/.${PROJECT_NAME}.Config.h"
-)
-
-##
 ##    インクルードパスの設定。
 ##
 
 include_directories("${PROJECT_SOURCE_DIR}/Include")
 include_directories("${PROJECT_BINARY_DIR}/Include")
+
+##----------------------------------------------------------------
+##
+##    Additional Packages.
+##    外部ライブラリ。
+##
+
+##----------------------------------------------------------------
+##
+##    設定を書き込んだファイルを生成。
+##
+
+configure_file(
+    "${INCLUDE_SOURCE_DIR}/.Config/ConfiguredSample.h.in"
+    "${INCLUDE_BINARY_DIR}/.Config/ConfiguredSample.h"
+)
+
+configure_file(
+    "${INCLUDE_SOURCE_DIR}/.Config/Config.h.cmake.in"
+    "${INCLUDE_BINARY_DIR}/.Config/.${PROJECT_NAME}.Config.h"
+)
 
 ##----------------------------------------------------------------
 ##
@@ -100,4 +110,3 @@ install(FILES   "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
 
 add_subdirectory(Lib)
 add_subdirectory(Bin)
-

@@ -49,7 +49,7 @@ ForEach (@PROJECT_NAME@_MODULE_NAME  ${@PROJECT_NAME@_MODULE_DIRS_LIST})
     ##  検索で見つかったファイルをインクルードする。
     ForEach (@PROJECT_NAME@_FILE  ${@PROJECT_NAME@_MODULE_CONFIG_FILES})
         message("Loading Module Config : ${@PROJECT_NAME@_FILE}")
-        include(${@PROJECT_NAME@_FILE})
+        Include (${@PROJECT_NAME@_FILE})
     EndForEach ()
 
 EndForEach()

@@ -114,6 +114,16 @@ dnl   Additional Packages.
 dnl   外部パッケージの追加
 dnl
 
+m4_include([.M4/WithExtPkgs.m4])
+
+MYAC_WITH_EXT_PKG(
+    [CPPUNIT],  [cppunit],  [Path to cppunit],  [yes],
+    [AMCNF_CPPUNIT_ENABLED],dnl
+)
+MYAC_SET_EXT_PKG_OPTIONS(
+    [CPPUNIT], [cppunit], [lib], [include], [bin],dnl
+)
+
 dnl----------------------------------------------------------------
 dnl
 dnl   Outputs.
@@ -141,6 +151,11 @@ AC_CONFIG_FILES([
 dnl
 dnl   Test Festures.
 dnl
+
+AC_CONFIG_FILES([
+    Lib/Common/Tests/Makefile
+    Lib/Tests/Makefile
+])
 
 dnl
 dnl   指定したファイルを生成する。

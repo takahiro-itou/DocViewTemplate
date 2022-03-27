@@ -42,3 +42,37 @@ else
 fi
 ${rm_f}  .M4/InitAutoMake.m4
 ${ln_h}  .M4/InitAutoMake.${am_trg_ver}.m4  .M4/InitAutoMake.m4
+
+##
+##  定数宣言
+##
+
+test_common_dir='.TestsConfig'
+
+##
+##
+##
+
+if [ ! -d  Lib/${test_common_dir}/Tests ] ; then
+    mkdir  -p  Lib/${test_common_dir}/Tests
+fi
+
+if [ -d  Lib/${test_common_dir}/Tests ] ; then
+    (cd  Lib/${test_common_dir}/Tests  \
+      &&  ${rm_f}  Makefile.am       \
+      &&  ${ln_s}  ../../Tests/.TestsCommon/Makefile.am)
+    (cd  Lib/${test_common_dir}/Tests  \
+      &&  ${rm_f}  CMakeLists.txt    \
+      &&  ${ln_s}  ../../Tests/.TestsCommon/CMakeLists.txt)
+fi
+
+for  dir  in  Common  ; do
+    if [ -d Lib/${dir}/Tests ] ; then
+        (cd  Lib/${dir}/Tests          \
+          &&  ${rm_f}  Makefile.am     \
+          &&  ${ln_h}  ../../${test_common_dir}/Tests/Makefile.am)
+        (cd  Lib/${dir}/Tests          \
+          &&  ${rm_f}  CMakeLists.txt  \
+          &&  ${ln_h}  ../../${test_common_dir}/Tests/CMakeLists.txt)
+    fi
+done
