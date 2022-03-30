@@ -73,6 +73,8 @@ include_directories("${PROJECT_BINARY_DIR}/Include")
 ##    外部ライブラリ。
 ##
 
+Include (${COMMON_CMAKE_DIR}/Modules/FindCppUnit.cmake)
+
 ##----------------------------------------------------------------
 ##
 ##    設定を書き込んだファイルを生成。
