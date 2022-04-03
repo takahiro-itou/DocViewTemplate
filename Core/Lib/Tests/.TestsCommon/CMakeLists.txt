@@ -19,14 +19,6 @@ set(TESTER_LINK_LIBRARIES
         ${PROJECT_NAME}-TestDriver
 )
 
-If ( CPPUNIT_FOUND )
-    include_directories("${CPPUNIT_INCLUDE_DIR}")
-    link_libraries     ("${CPPUNIT_LIBRARIES}")
-    set(CMAKE_CXX_FLAGS     "${CMAKE_CXX_FLAGS}  -DHAVE_CPPUNIT=1")
-Else  ()
-    set(CMAKE_CXX_FLAGS     "${CMAKE_CXX_FLAGS}  -DHAVE_CPPUNIT=0")
-EndIf ()
-
 include_directories(${PROJECT_SOURCE_DIR}/Lib/Tests)
 link_libraries     (${TESTER_LINK_LIBRARIES})
 
