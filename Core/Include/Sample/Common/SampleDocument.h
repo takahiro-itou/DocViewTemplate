@@ -23,6 +23,8 @@
 
 #include    "SampleSettings.h"
 
+#include    <string>
+
 SAMPLE_NAMESPACE_BEGIN
 namespace  Common  {
 
