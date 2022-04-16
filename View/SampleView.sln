@@ -69,6 +69,7 @@ Global
 		{3446924D-6058-4767-B215-8FDBAEF1756C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3446924D-6058-4767-B215-8FDBAEF1756C}.Release|Win32.ActiveCfg = Release|Any CPU
 		{3446924D-6058-4767-B215-8FDBAEF1756C}.Release|x64.ActiveCfg = Release|x64
+		{3446924D-6058-4767-B215-8FDBAEF1756C}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
