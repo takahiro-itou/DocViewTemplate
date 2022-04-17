@@ -2,14 +2,113 @@
 
 #pragma once
 
+#include    "Sample/Common/SampleDocument.h"
+
 using namespace System;
 
-namespace Wrapper {
+namespace  SampleWrapper  {
+namespace  Common  {
 
-public ref class Class1
+//========================================================================
+//
+//    SampleDocument  class.
+//
+
+public ref  class  SampleDocument
 {
+
+//========================================================================
+//
+//    Internal Type Definitions.
+//
+
+//========================================================================
+//
+//    Constructor(s) and Destructor.
+//
 public:
-    int test1(System::String^ message);
+
+    //----------------------------------------------------------------
+    /**   インスタンスを初期化する
+    **  （デフォルトコンストラクタ）。
+    **
+    **/
+    SampleDocument();
+
+    //----------------------------------------------------------------
+    /**   インスタンスを破棄する
+    **  （デストラクタ）。
+    **
+    **/
+    virtual  ~SampleDocument();
+
+    //----------------------------------------------------------------
+    /**   インスタンスを破棄する
+    **  （ファイナライザ）。
+    **
+    **/
+    !SampleDocument();
+
+//========================================================================
+//
+//    Public Member Functions (Implement Pure Virtual).
+//
+
+//========================================================================
+//
+//    Public Member Functions (Overrides).
+//
+
+//========================================================================
+//
+//    Public Member Functions (Pure Virtual Functions).
+//
+
+//========================================================================
+//
+//    Public Member Functions (Virtual Functions).
+//
+
+//========================================================================
+//
+//    Public Member Functions.
+//
+public:
+
+    //----------------------------------------------------------------
+    /**   入力メッセージ中に含まれるアルファベットを数える。
+    **
+    **  @param [in] message   入力データ
+    **  @return     半角アルファベット [A-Za-z] の文字数
+    **/
+    int
+    testFunc1(System::String^ message);
+
+//========================================================================
+//
+//    Accessors.
+//
+
+//========================================================================
+//
+//    Protected Member Functions.
+//
+
+//========================================================================
+//
+//    For Internal Use Only.
+//
+
+//========================================================================
+//
+//    Member Variables.
+//
+private:
+
+    typedef     Sample::Common::SampleDocument  WrapTarget;
+
+    WrapTarget  *   m_ptrObj;
 };
 
-}
+}   //  End of namespace  Common
+}   //  End of namespace  SampleWrapper
