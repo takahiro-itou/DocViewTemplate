@@ -6,7 +6,8 @@
         Dim objWrapper As SampleWrapper.Common.SampleDocument = New SampleWrapper.Common.SampleDocument()
 
         message = TextBox1.Text
-        result = objWrapper.testFunc1(message)
+        objWrapper.setMessage(message)
+        result = objWrapper.countAlphabet()
         MsgBox("入力した文字列中のアルファベットの個数は " & result, MsgBoxStyle.OkOnly)
     End Sub
 End Class

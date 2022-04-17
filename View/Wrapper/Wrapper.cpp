@@ -48,10 +48,22 @@ SampleDocument::!SampleDocument()
 //    入力メッセージ中に含まれるアルファベットを数える。
 //
 
-int SampleDocument::testFunc1(System::String^ message)
+int
+SampleDocument::countAlphabet()
+{
+    return ( this->m_ptrObj->countAlphabet() );
+}
+
+//----------------------------------------------------------------
+//    メッセージを設定する。
+//
+
+void
+SampleDocument::setMessage(
+        System::String^ message)
 {
     std::string tmp = msclr::interop::marshal_as<std::string>(message);
-    return ( this->m_ptrObj->testFunc1(tmp) );
+    this->m_ptrObj->setMessage(tmp);
 }
 
 }   //  End of namespace  Common

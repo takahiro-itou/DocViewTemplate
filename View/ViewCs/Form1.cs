@@ -23,7 +23,8 @@ namespace ViewCs
             int result;
             SampleWrapper.Common.SampleDocument objWrapper = new SampleWrapper.Common.SampleDocument();
 
-            result = objWrapper.testFunc1(message);
+            objWrapper.setMessage(message);
+            result = objWrapper.countAlphabet();
             MessageBox.Show("文字列中のアルファベットの個数は " + result);
         }
     }

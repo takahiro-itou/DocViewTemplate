@@ -44,6 +44,7 @@ namespace  {
 //  （デフォルトコンストラクタ）。
 
 SampleDocument::SampleDocument()
+    : m_message()
 {
 }
 
@@ -81,13 +82,12 @@ SampleDocument::~SampleDocument()
 //
 
 int
-SampleDocument::testFunc1(
-        const  std::string  &message)  const
+SampleDocument::countAlphabet()  const
 {
-    const   size_t  len = message.length();
+    const   size_t  len = this->m_message.length();
     size_t  cnt = 0;
     for ( size_t i = 0; i < len; ++ i ) {
-        const  char tmp = message[i];
+        const  char tmp = this->m_message[i];
         if ( ('A' <= tmp) && (tmp <= 'Z') ) {
             ++ cnt;
         } else if ( ('a' <= tmp) && (tmp <= 'z') ) {
@@ -107,6 +107,16 @@ SampleDocument::testFunc1(
 //
 //    Accessors.
 //
+
+//----------------------------------------------------------------
+//    メッセージを設定する。
+
+void
+SampleDocument::setMessage(
+        const  std::string  &message)
+{
+    this->m_message = message;
+}
 
 //========================================================================
 //
