@@ -21,10 +21,10 @@ namespace ViewCs
         {
             System.String  message = textBox1.Text;
             int result;
-            Wrapper.Class1 objWrapper = new Wrapper.Class1();
+            SampleWrapper.Common.SampleDocument objWrapper = new SampleWrapper.Common.SampleDocument();
 
-            result = objWrapper.test1(message);
-            MessageBox.Show("長さは " + result);
+            result = objWrapper.testFunc1(message);
+            MessageBox.Show("文字列中のアルファベットの個数は " + result);
         }
     }
 }
