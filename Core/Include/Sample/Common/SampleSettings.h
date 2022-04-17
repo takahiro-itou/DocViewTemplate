@@ -22,7 +22,11 @@
 #    define   SAMPLE_CONFIG_INCLUDED_SAMPLE_SETTINGS_H
 
 //  スクリプトによる設定値が書き込まれたヘッダを読み込む。  //
-#include    "Sample/.Config/ConfiguredSample.h"
+#if defined( SAMPLE_USE_PRE_CONFIGURED_MSVC )
+#    include    "Sample/.Config/PreConfigSample.msvc.h"
+#else
+#    include    "Sample/.Config/ConfiguredSample.h"
+#endif
 
 SAMPLE_NAMESPACE_BEGIN
 
