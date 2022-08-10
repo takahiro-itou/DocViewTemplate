@@ -8,4 +8,5 @@ ipch/
 *.suo
 
 syntax: regexp
+^.vs/
 

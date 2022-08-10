@@ -3,6 +3,7 @@ Debug/
 Release/
 ipch/
 
+/.vs/
 /*.sdf
 /*.suo
 
