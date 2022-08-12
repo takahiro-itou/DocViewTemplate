@@ -3,9 +3,12 @@ syntax: glob
 Debug/
 Release/
 ipch/
+bin/
+obj/
 
 *.sdf
 *.suo
 
 syntax: regexp
+^.vs/
 
