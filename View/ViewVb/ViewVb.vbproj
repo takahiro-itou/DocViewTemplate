@@ -4,7 +4,8 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFrameworks>
-        net48;
+      net6.0-windows;
+      net48;
     </TargetFrameworks>
     <StartupObject>ViewVb.My.MyApplication</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
@@ -19,11 +20,11 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net48' ">
-    <ProjectReference Include="..\Cli.NetFramework4.8\Wrapper.Net48.vcxproj" />
-  </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net6.0-windows' ">
     <ProjectReference Include="..\Cli.Net6\Wrapper.Net60.vcxproj" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net48' ">
+    <ProjectReference Include="..\Cli.NetFramework4.8\Wrapper.Net48.vcxproj" />
   </ItemGroup>
 
   <ItemGroup>
