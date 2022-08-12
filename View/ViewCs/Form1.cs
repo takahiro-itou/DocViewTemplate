@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
+﻿
 namespace ViewCs
 {
     public partial class Form1 : Form
@@ -17,9 +8,9 @@ namespace ViewCs
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-            System.String  message = textBox1.Text;
+            System.String  message = TextBox1.Text;
             int result;
             SampleWrapper.Common.SampleDocument objWrapper = new SampleWrapper.Common.SampleDocument();
 
@@ -28,4 +19,5 @@ namespace ViewCs
             MessageBox.Show("文字列中のアルファベットの個数は " + result);
         }
     }
+
 }
