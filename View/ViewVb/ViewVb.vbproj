@@ -20,10 +20,10 @@
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net48' ">
-    <ProjectReference Include="..\Cli.NetFramework4.8\Wrapper.vcxproj" />
+    <ProjectReference Include="..\Cli.NetFramework4.8\Wrapper.Net48.vcxproj" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net6.0-windows' ">
-    <ProjectReference Include="..\NetCLI\NetCLI.vcxproj" />
+    <ProjectReference Include="..\Cli.Net6\Wrapper.Net60.vcxproj" />
   </ItemGroup>
 
   <ItemGroup>
