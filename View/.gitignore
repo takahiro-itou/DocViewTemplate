@@ -2,6 +2,8 @@
 Debug/
 Release/
 ipch/
+bin/
+obj/
 
 /.vs/
 /*.sdf

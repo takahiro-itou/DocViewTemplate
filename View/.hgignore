@@ -3,6 +3,8 @@ syntax: glob
 Debug/
 Release/
 ipch/
+bin/
+obj/
 
 *.sdf
 *.suo
