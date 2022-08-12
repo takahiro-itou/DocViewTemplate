@@ -12,19 +12,19 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wrapper.Net48", "Cli.NetFra
         {64D47941-C76A-4448-BAE1-62DE0B4C8AC5} = {64D47941-C76A-4448-BAE1-62DE0B4C8AC5}
     EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wrapper.Net48", "Cli.Net6\Wrapper.Net60.vcxproj", "{4869195C-1E29-42CF-9FB5-52CE89AC49B1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wrapper.Net60", "Cli.Net6\Wrapper.Net60.vcxproj", "{4869195C-1E29-42CF-9FB5-52CE89AC49B1}"
     ProjectSection(ProjectDependencies) = postProject
         {64D47941-C76A-4448-BAE1-62DE0B4C8AC5} = {64D47941-C76A-4448-BAE1-62DE0B4C8AC5}
     EndProjectSection
 EndProject
 
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ViewVb", "ViewVb\ViewVb.vbproj", "{3446924D-6058-4767-B215-8FDBAEF1756C}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "ViewVb", "ViewVb\ViewVb.vbproj", "{3446924D-6058-4767-B215-8FDBAEF1756C}"
     ProjectSection(ProjectDependencies) = postProject
         {4869195C-1E29-42CF-9FB5-52CE89AC49B1} = {4869195C-1E29-42CF-9FB5-52CE89AC49B1}
         {39572160-04E9-4F8F-BA9F-422747AD772F} = {39572160-04E9-4F8F-BA9F-422747AD772F}
     EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewCs", "ViewCs\ViewCs.csproj", "{4486E20D-9A2C-4F4A-9B63-B5CC3F32DBDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewCs", "ViewCs\ViewCs.csproj", "{4486E20D-9A2C-4F4A-9B63-B5CC3F32DBDC}"
     ProjectSection(ProjectDependencies) = postProject
         {4869195C-1E29-42CF-9FB5-52CE89AC49B1} = {4869195C-1E29-42CF-9FB5-52CE89AC49B1}
     EndProjectSection
@@ -42,7 +42,7 @@ Global
 
     GlobalSection(ProjectConfigurationPlatforms) = postSolution
         {64D47941-C76A-4448-BAE1-62DE0B4C8AC5}.Debug|Any CPU.ActiveCfg = Debug|x64
-        {64D47941-C76A-4448-BAE1-62DE0B4C8AC5}.Debug|Aby CPU.Build.0 = Debug|x64
+        {64D47941-C76A-4448-BAE1-62DE0B4C8AC5}.Debug|Any CPU.Build.0 = Debug|x64
         {64D47941-C76A-4448-BAE1-62DE0B4C8AC5}.Debug|x64.ActiveCfg = Debug|x64
         {64D47941-C76A-4448-BAE1-62DE0B4C8AC5}.Debug|x64.Build.0 = Debug|x64
         {64D47941-C76A-4448-BAE1-62DE0B4C8AC5}.Debug|x86.ActiveCfg = Debug|Win32
@@ -66,6 +66,19 @@ Global
         {39572160-04E9-4F8F-BA9F-422747AD772F}.Release|x64.Build.0 = Release|x64
         {39572160-04E9-4F8F-BA9F-422747AD772F}.Release|x86.ActiveCfg = Release|Win32
         {39572160-04E9-4F8F-BA9F-422747AD772F}.Release|x86.Build.0 = Release|Win32
+
+        {4869195C-1E29-42CF-9FB5-52CE89AC49B1}.Debug|Any CPU.ActiveCfg = Debug|x64
+        {4869195C-1E29-42CF-9FB5-52CE89AC49B1}.Debug|Any CPU.Build.0 = Debug|x64
+        {4869195C-1E29-42CF-9FB5-52CE89AC49B1}.Debug|x64.ActiveCfg = Debug|x64
+        {4869195C-1E29-42CF-9FB5-52CE89AC49B1}.Debug|x64.Build.0 = Debug|x64
+        {4869195C-1E29-42CF-9FB5-52CE89AC49B1}.Debug|x86.ActiveCfg = Debug|Win32
+        {4869195C-1E29-42CF-9FB5-52CE89AC49B1}.Debug|x86.Build.0 = Debug|Win32
+        {4869195C-1E29-42CF-9FB5-52CE89AC49B1}.Release|Any CPU.ActiveCfg = Release|x64
+        {4869195C-1E29-42CF-9FB5-52CE89AC49B1}.Release|Any CPU.Build.0 = Release|x64
+        {4869195C-1E29-42CF-9FB5-52CE89AC49B1}.Release|x64.ActiveCfg = Release|x64
+        {4869195C-1E29-42CF-9FB5-52CE89AC49B1}.Release|x64.Build.0 = Release|x64
+        {4869195C-1E29-42CF-9FB5-52CE89AC49B1}.Release|x86.ActiveCfg = Release|Win32
+        {4869195C-1E29-42CF-9FB5-52CE89AC49B1}.Release|x86.Build.0 = Release|Win32
 
         {3446924D-6058-4767-B215-8FDBAEF1756C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
         {3446924D-6058-4767-B215-8FDBAEF1756C}.Debug|Any CPU.Build.0 = Debug|Any CPU
