@@ -70,10 +70,6 @@ fi
 CXXFLAGS="${myac_cxxflags} ${myac_cxx_warning_flags}"
 CFLAGS="${myac_cflags} ${myac_c_warning_flags}"
 
-EXTRA_COMPILER_OPTIONS="-Wall"
-CFLAGS="${CFLAGS}  ${EXTRA_COMPILER_OPTIONS}"
-CXXFLAGS="${CXXFLAGS}  ${EXTRA_COMPILER_OPTIONS}  -Weffc++"
-
 dnl
 dnl   Project Name Space.
 dnl
