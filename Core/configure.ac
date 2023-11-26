@@ -48,8 +48,9 @@ dnl
 : ${CFLAGS:='-O0  -g  -D_DEBUG'}
 : ${CXXFLAGS:='-O0  -g  -D_DEBUG'}
 
-CFLAGS="${CFLAGS}  -std=c++11  -Wall"
-CXXFLAGS="${CXXFLAGS}  -std=c++11  -Wall  -Weffc++"
+EXTRA_COMPILER_OPTIONS="-Wall"
+CFLAGS="${CFLAGS}  -std=c++11  ${EXTRA_COMPILER_OPTIONS}"
+CXXFLAGS="${CXXFLAGS}  -std=c++11  ${EXTRA_COMPILER_OPTIONS}  -Weffc++"
 
 dnl
 dnl   Project Name Space.
