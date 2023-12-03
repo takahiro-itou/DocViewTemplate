@@ -28,5 +28,4 @@ set(INCLIB_HEADER_FILES
 ##    ビルドとインストールの設定。
 ##
 
-include(${COMMON_CMAKE_DIR}/BuildLibraryCommon.cmake)
-
+Include (${COMMON_CMAKE_DIR}/BuildLibraryCommon.cmake)

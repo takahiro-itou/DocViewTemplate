@@ -37,4 +37,4 @@ Include (${COMMON_CMAKE_DIR}/BuildLibraryCommon.cmake)
 ##    テストの設定。
 ##
 
-add_subdirectory(Tests)
+Add_SubDirectory (Tests)
