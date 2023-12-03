@@ -22,10 +22,15 @@ project(${PROJECT_NAME}     VERSION  1.0.0)
 
 ##----------------------------------------------------------------
 ##
+##    デフォルトのコンパイルオプション。
+##
+
+##----------------------------------------------------------------
+##
 ##    プロジェクトの基本設定。
 ##
 
-enable_testing ()
+enable_testing()
 
 set(COMMON_CMAKE_DIR        "${PROJECT_SOURCE_DIR}/.CMake")
 set(INCTOP_DIR_NAME         "Include")
