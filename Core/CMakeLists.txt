@@ -22,10 +22,33 @@ project(${PROJECT_NAME}     VERSION  1.0.0)
 
 ##----------------------------------------------------------------
 ##
+##    デフォルトのコンパイルオプション。
+##
+
+If (NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE    Release)
+EndIf ()
+
+message("Build Type = ${CMAKE_BUILD_TYPE}")
+
+set(CXX_WARNING_FLAGS       "-Wall -Weffc++")
+set(C_WARNING_FLAGS         "-Wall")
+
+set(CMAKE_CXX_FLAGS         "${CMAKE_CXX_FLAGS} ${CXX_WARNING_FLAGS}")
+set(CMAKE_C_FLAGS           "${CMAKE_C_FLAGS}   ${C_WARNING_FLAGS}")
+
+set(CMAKE_CXX_FLAGS_DEBUG       "${CMAKE_CXX_FLAGS_DEBUG} -D_DEBUG")
+set(CMAKE_C_FLAGS_DEBUG         "${CMAKE_C_FLAGS_DEBUG}   -D_DEBUG")
+
+# set(CMAKE_CXX_FLAGS_RELEASE     "${CMAKE_CXX_FLAGS_RELEASE} -DNDEBUG")
+# set(CMAKE_C_FLAGS_RELEASE       "${CMAKE_C_FLAGS_RELEASE}   -DNDEBUG")
+
+##----------------------------------------------------------------
+##
 ##    プロジェクトの基本設定。
 ##
 
-enable_testing ()
+enable_testing()
 
 set(COMMON_CMAKE_DIR        "${PROJECT_SOURCE_DIR}/.CMake")
 set(INCTOP_DIR_NAME         "Include")
@@ -114,5 +137,5 @@ install(FILES   "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
 ##    サブディレクトリの追加。
 ##
 
-add_subdirectory(Lib)
-add_subdirectory(Bin)
+Add_SubDirectory (Lib)
+Add_SubDirectory (Bin)
