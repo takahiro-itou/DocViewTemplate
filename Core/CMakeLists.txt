@@ -131,5 +131,5 @@ install(FILES   "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
 ##    サブディレクトリの追加。
 ##
 
-Add_SubDirectory(Lib)
-Add_SubDirectory(Bin)
+Add_SubDirectory (Lib)
+Add_SubDirectory (Bin)

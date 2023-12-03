@@ -11,7 +11,7 @@ set(LIBRARIES_TARGET_PREFIX)
 ##    サブディレクトリの追加。
 ##
 
-add_subdirectory(Tests)
-add_subdirectory(.Config)
+Add_SubDirectory (Tests)
+Add_SubDirectory (.Config)
 
-add_subdirectory(Common)
+Add_SubDirectory (Common)
