@@ -72,6 +72,9 @@ void  SampleDocumentTest::testCountAlphabet1()
     testee.setMessage("abcXYZ123");
     CPPUNIT_ASSERT_EQUAL( 6, testee.countAlphabet() );
 
+    testee.setMessage("123");
+    CPPUNIT_ASSERT_EQUAL( 0, testee.countAlphabet() );
+
     testee.setMessage("abc");
     CPPUNIT_ASSERT_EQUAL( 3, testee.countAlphabet() );
 
