@@ -42,7 +42,8 @@ public:
     virtual  void   tearDown()  override    { }
 
 private:
-    void  testNameSpace();
+    void  testCtor();
+
 };
 
 CPPUNIT_TEST_SUITE_REGISTRATION( SampleDocumentTest );
