@@ -19,7 +19,7 @@
 **/
 
 #include    "TestDriver.h"
-#include    "Sample/Common/SampleSettings.h"
+#include    "Sample/Common/SampleDocument.h"
 
 SAMPLE_NAMESPACE_BEGIN
 
