@@ -6,6 +6,7 @@
 EXTRATESTS              =
 TESTS                   =  \
         SampleCoreSettingsTest  \
+        SampleDocumentTest      \
         ${EXTRATESTS}
 ##
 ##    Test Configurations.
@@ -31,4 +32,5 @@ TEST_LDFLAGS_COMMON         +=
 ##
 
 SampleCoreSettingsTest_SOURCES  =  SampleCoreSettingsTest.cpp
+SampleDocumentTest_SOURCES      =  SampleDocumentTest.cpp
 
