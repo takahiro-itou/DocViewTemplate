@@ -22,6 +22,7 @@
 #include    "Sample/Common/SampleDocument.h"
 
 SAMPLE_NAMESPACE_BEGIN
+namespace  Common  {
 
 //========================================================================
 //
@@ -60,6 +61,7 @@ void  SampleDocumentTest::testCtor()
     return;
 }
 
+}   //  End of namespace  Common
 SAMPLE_NAMESPACE_END
 
 //========================================================================
