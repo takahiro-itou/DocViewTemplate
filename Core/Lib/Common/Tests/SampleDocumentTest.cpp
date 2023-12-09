@@ -36,7 +36,7 @@ class  SampleDocumentTest : public  TestFixture
 {
     CPPUNIT_TEST_SUITE(SampleDocumentTest);
     CPPUNIT_TEST(testCtor);
-    CPPUNIT_TEST(testCountAlphabet);
+    CPPUNIT_TEST(testCountAlphabet1);
     CPPUNIT_TEST_SUITE_END();
 
 public:
@@ -45,7 +45,7 @@ public:
 
 private:
     void  testCtor();
-    void  testCountAlphabet();
+    void  testCountAlphabet1();
 
 };
 
@@ -63,12 +63,15 @@ void  SampleDocumentTest::testCtor()
     return;
 }
 
-void  SampleDocumentTest::testCountAlphabet()
+void  SampleDocumentTest::testCountAlphabet1()
 {
     SampleDocument  testee;
 
     testee.setMessage("abcXYZ123");
     CPPUNIT_ASSERT_EQUAL( 6, testee.countAlphabet() );
+
+    testee.setMessage("abc");
+    CPPUNIT_ASSERT_EQUAL( 3, testee.countAlphabet() );
 
     return;
 }
