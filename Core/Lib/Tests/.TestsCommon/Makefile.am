@@ -55,7 +55,7 @@ TEST_CPPFLAGS_COMMON        +=
 TEST_LDFLAGS_COMMON         +=
 
 if  AMCNF_CPPUNIT_ENABLED
-TEST_CPPFLAGS_XUNIT         =  @CPPUNIT_CPPFLAGS@   -DHAVE_CPPUNIT=1
+TEST_CPPFLAGS_XUNIT         =  @CPPUNIT_CPPFLAGS@
 TEST_CFLAGS_XUNIT           =
 TEST_CXXFLAGS_XUNIT         =
 TEST_LDFLAGS_XUNIT          =  @CPPUNIT_LDFLAGS@
@@ -69,12 +69,13 @@ TEST_LINK_LDADD_XUNIT       =
 endif
 
 AM_CPPFLAGS         =  \
-        -I${TESTEE_SOURCE_DIR}  \
-        -I${INCTOP_SOURCE_DIR}  \
-        -I${LIBTOP_SOURCE_DIR}  \
-        -I${DRIVER_SOURCE_DIR}  \
-        -I${DRIVER_BINARY_DIR}  \
-        ${TEST_CPPFLAGS}
+        -I${TESTEE_SOURCE_DIR}      \
+        -I${INCTOP_SOURCE_DIR}      \
+        -I${LIBTOP_SOURCE_DIR}      \
+        -I${DRIVER_SOURCE_DIR}      \
+        -I${DRIVER_BINARY_DIR}      \
+        ${TEST_CPPFLAGS_COMMON}     \
+        ${TEST_CPPFLAGS_XUNIT}
 
 AM_CFLAGS           =  ${TEST_CFLAGS_XUNIT}
 AM_CXXFLAGS         =  ${TEST_CXXFLAGS_XUNIT}
