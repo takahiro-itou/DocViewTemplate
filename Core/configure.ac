@@ -143,16 +143,6 @@ MYAC_SET_EXT_PKG_OPTIONS(
     [CPPUNIT], [cppunit], [lib], [include], [bin],dnl
 )
 
-if test "x${CPPUNIT_LIBDIR}y" != "xy" ; then
-  CPPUNIT_CPPFLAGS="-I${CPPUNIT_INCDIR}"
-  CPPUNIT_LDFLAGS=''
-  CPPUNIT_LINK_LDADD="${CPPUNIT_LIBDIR}/libcppunit.a"
-else
-  CPPUNIT_CPPFLAGS=''
-  CPPUNIT_LDFLAGS=''
-  CPPUNIT_LINK_LDADD='-lcppunit'
-fi
-
 dnl----------------------------------------------------------------
 dnl
 dnl   Outputs.
