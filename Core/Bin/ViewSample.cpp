@@ -26,7 +26,7 @@ using   namespace   SAMPLE_NAMESPACE;
 
 int  main(int argc, char * argv[])
 {
-    SampleDocument  doc;
+    Sample::Common::SampleDocument  doc;
 
     std::string text("Hello, World!");
 
