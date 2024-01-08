@@ -45,5 +45,5 @@ dist_noinst_DATA        =  \
 ##
 
 ViewSample_SOURCES      =  ViewSample.cpp
-ViewSample_LDADD        =
+ViewSample_LDADD        =  -lsampleCommon
 
