@@ -7,9 +7,9 @@ on:
   pull_request:
     branches: [ "master", "develop" ]
 
-  jobs:
-    build:
-      runs-on: ubuntu-latest
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
@@ -18,7 +18,7 @@ on:
       run:  cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=Release
 
     - name: Build
-      run   cmake --build ${{github.workspace}}/build --config Release
+      run : cmake --build ${{github.workspace}}/build --config Release
 
     - name: Run Test
-      run   ctest -C Release
+      run : ctest -C Release
