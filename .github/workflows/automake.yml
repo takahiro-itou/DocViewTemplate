@@ -37,4 +37,6 @@ jobs:
       run : cd build && make check
 
     - name: make distcheck
-      run : cd build && make distcheck
+      run : |
+        cd build
+        env DISTCHECK_CONFIGURE_FLAGS='--without-cppunit'  make distcheck
