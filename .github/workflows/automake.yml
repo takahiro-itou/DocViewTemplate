@@ -13,23 +13,28 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        submodules: 'true'
 
     - name: Run bootstrap
       run : |
-          pwd
-          cd Core
-          ls -aR
-          ./bootstrap.sh
-          ls
+        pwd
+        cd Core
+        ls -aR
+        ./bootstrap.sh
+        ls -aR
 
     - name: Run configrue
-      run:  ./configure
+      run : |
+        mkdir -p build
+        cd build
+        ../Core/configure
 
     - name: Build
-      run:  make
+      run : cd build && make
 
     - name: Run Test
-      run:  make check
+      run : cd build && make check
 
     - name: make distcheck
-      run:  make distcheck
+      run : cd build && make distcheck
