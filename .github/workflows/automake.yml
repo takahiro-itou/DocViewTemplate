@@ -28,7 +28,7 @@ jobs:
       run : |
         mkdir -p build
         cd build
-        ../Core/configure
+        ../Core/run-autoconf-release  --without-cppunit
 
     - name: Build
       run : cd build && make

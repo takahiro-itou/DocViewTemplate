@@ -21,11 +21,11 @@ jobs:
         pwd
         cd Core
         ls -aR
-        ./bootstrap
+        ./bootstrap.sh
         ls -aR
 
     - name: Configure CMake
-      run : cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=Release -S Core
+      run : cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=Release -DCPPUNIT_DR=no -S Core
 
     - name: Build
       run : cmake --build ${{github.workspace}}/build --config Release
