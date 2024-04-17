@@ -1,0 +1,42 @@
+
+name: CI for Core
+
+on:
+  push:
+    branches: [ "master", "develop" ]
+  pull_request:
+    branches: [ "master", "develop" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: 'true'
+
+    - name: Run bootstrap
+      run : |
+        pwd
+        cd Core
+        ls -aR
+        ./bootstrap.sh
+        ls -aR
+
+    - name: Run configrue
+      run : |
+        mkdir -p build
+        cd build
+        ../Core/run-autoconf-release  --without-cppunit
+
+    - name: Build
+      run : cd build && make
+
+    - name: Run Test
+      run : cd build && make check
+
+    - name: make distcheck
+      run : |
+        cd build
+        env DISTCHECK_CONFIGURE_FLAGS='--without-cppunit'  make distcheck
