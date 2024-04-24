@@ -11,6 +11,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy :
+      fail-fast : false
+
+      matrix :
+        build_type   : [ Release, Debug ]
+        with_cppunit : [ no ]
+
     steps:
     - uses: actions/checkout@v4
       with:
