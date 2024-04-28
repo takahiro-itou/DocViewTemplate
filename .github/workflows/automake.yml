@@ -12,31 +12,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-      with:
-        submodules: 'true'
+      - uses: actions/checkout@v4
+        with:
+          submodules: 'true'
 
-    - name: Run bootstrap
-      run : |
-        pwd
-        cd Core
-        ls -aR
-        ./bootstrap.sh
-        ls -aR
+      - name: Run bootstrap
+        run : |
+          pwd
+          cd Core
+          ls -aR
+          ./bootstrap.sh
+          ls -aR
+        shell : bash
 
-    - name: Run configrue
-      run : |
-        mkdir -p build
-        cd build
-        ../Core/run-autoconf-release  --without-cppunit
+      - name: Run configrue
+        run : |
+          mkdir -p build
+          cd build
+          ../Core/run-autoconf-release  --without-cppunit
+        shell : bash
 
-    - name: Build
-      run : cd build && make
+      - name: Build
+        run : cd build && make
 
-    - name: Run Test
-      run : cd build && make check
+      - name: Run Test
+        run : cd build && make check
 
-    - name: make distcheck
-      run : |
-        cd build
-        env DISTCHECK_CONFIGURE_FLAGS='--without-cppunit'  make distcheck
+      - name: make distcheck
+        run : |
+          cd build
+          env DISTCHECK_CONFIGURE_FLAGS='--without-cppunit'  make distcheck
+        shell : bash
