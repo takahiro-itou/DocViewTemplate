@@ -15,13 +15,19 @@ jobs:
       fail-fast : false
 
       matrix :
-        build-type   : [ Release, Debug ]
-        with-cppunit : [ no ]
+        build-type   : [ release, debug ]
+        with-cppunit : [ no, tools/cppunit ]
 
     steps:
       - uses: actions/checkout@v4
         with:
           submodules: 'true'
+
+      - if : ${{ matrix.with-cppunit != 'no' }}
+        name : Install CppUnit
+        uses : takahiro-itou/install-cppunit-action@v1.0.2
+        with :
+          install-prefix : "${{ github.workspace }}/${{ matrix.with-cppunit }}"
 
       - name: Run bootstrap
         run : |
@@ -36,7 +42,7 @@ jobs:
         run : |
           mkdir -p build
           cd build
-          ../Core/run-autoconf-release  --without-cppunit
+          ../Core/run-autoconf-${{ matrix.build-type }}  --with-cppunit=${{ matrix-with-cppunit }}
         shell : bash
 
       - name: Build
