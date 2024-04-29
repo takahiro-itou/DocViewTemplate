@@ -42,7 +42,7 @@ jobs:
         run : |
           mkdir -p build
           cd build
-          ../Core/run-autoconf-${{ matrix.build-type }}  --with-cppunit=${{ matrix-with-cppunit }}
+          ../Core/run-autoconf-${{ matrix.build-type }}  --with-cppunit=${{ matrix.with-cppunit }}
         shell : bash
 
       - name: Build
