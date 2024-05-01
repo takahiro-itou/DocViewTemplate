@@ -84,8 +84,6 @@ SampleDocument::~SampleDocument()
 int
 SampleDocument::countAlphabet()  const
 {
-    return ( 0 );
-
     const   size_t  len = this->m_message.length();
     size_t  cnt = 0;
     for ( size_t i = 0; i < len; ++ i ) {
