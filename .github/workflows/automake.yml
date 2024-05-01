@@ -25,10 +25,9 @@ jobs:
 
       - name : Install CppUnit
         id   : install-cppunit
-        if   : ${{ matrix.with-cppunit != 'no' }}
         uses : takahiro-itou/install-cppunit-action@v1.1.0
         with :
-          install-prefix : "${{ github.workspace }}/${{ matrix.with-cppunit }}"
+          install-prefix : "${{ matrix.with-cppunit }}"
 
       - name: Run bootstrap
         run : |
@@ -43,7 +42,8 @@ jobs:
         run : |
           mkdir -p build
           cd build
-          ../Core/run-autoconf-${{ matrix.build-type }}  --with-cppunit=${{ matrix.with-cppunit }}
+          ../Core/run-autoconf-${{ matrix.build-type }}  \
+            --with-cppunit=${{ steps.install-cppunit.outputs.real-install-dir }}
         shell : bash
 
       - name: Build
