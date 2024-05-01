@@ -53,5 +53,5 @@ jobs:
 
       - name: Run Test
         run : |
-          ctest -C ${{ matrix.build-type }}
+          ctest -C "${{ github.workspace }}/build"
         shell : bash
