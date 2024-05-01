@@ -16,12 +16,18 @@ jobs:
 
       matrix :
         build-type   : [ Release, Debug ]
-        with-cppunit : [ no ]
+        with-cppunit : [ no, tools/cppunit ]
 
     steps:
       - uses: actions/checkout@v4
         with:
           submodules: 'true'
+
+      - name : Install CppUnit
+        id   : install-cppunit
+        uses : takahiro-itou/install-cppunit-action@v1.1.0
+        with :
+          install-prefix : "${{ matrix.with-cppunit }}"
 
       - name: Run bootstrap
         run : |
@@ -32,10 +38,20 @@ jobs:
           ls -aR
 
       - name: Configure CMake
-        run : cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{ matrix.build-type }} -DCPPUNIT_DIR=${{ matrix.with-cppunit }} -S Core
+        run : |
+          cmake -B "${{ github.workspace }}/build"  \
+            -DCMAKE_BUILD_TYPE=${{ matrix.build-type }}  \
+            -DCPPUNIT_DIR=${{ steps.install-cppunit.outputs.real-install-dir }} \
+            -S Core
+        shell : bash
 
       - name: Build
-        run : cmake --build ${{github.workspace}}/build --config Release
+        run : |
+          cmake --build "${{ github.workspace }}/build"  \
+          --config ${{ matrix.build-type }}
+        shell : bash
 
       - name: Run Test
-        run : ctest -C Release
+        run : |
+          ctest -C ${{ matrix.build-type }}
+        shell : bash
