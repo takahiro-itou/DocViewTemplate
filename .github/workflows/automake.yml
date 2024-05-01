@@ -23,8 +23,9 @@ jobs:
         with:
           submodules: 'true'
 
-      - if : ${{ matrix.with-cppunit != 'no' }}
-        name : Install CppUnit
+      - name : Install CppUnit
+        id   : install-cppunit
+        if   : ${{ matrix.with-cppunit != 'no' }}
         uses : takahiro-itou/install-cppunit-action@v1.0.2
         with :
           install-prefix : "${{ github.workspace }}/${{ matrix.with-cppunit }}"
