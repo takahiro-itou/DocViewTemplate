@@ -32,10 +32,7 @@ jobs :
       - name : Build
         working-directory : ${{ github.workspace }}
         run : >
-          msbuild -restore -t:Rebuild
-            -p:Platform=x64
-            -p:Configuration="${{ matrix.build-type }}"
-            "${{ env.SOLUTION_FILE_PATH }}"
+          msbuild -restore -t:Rebuild -p:Platform=x64 -p:Configuration="${{ matrix.build-type }}" "${{ env.SOLUTION_FILE_PATH }}"
         shell : pwsh
 
 on :
