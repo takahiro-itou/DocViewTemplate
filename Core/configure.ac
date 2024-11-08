@@ -28,6 +28,12 @@ dnl
 AC_CONFIG_AUX_DIR([.Config])
 
 dnl
+dnl   ターゲットシステムを判定
+dnl
+
+m4_include([.M4/TargetSystem.m4])
+
+dnl
 dnl   適当なバージョンの automake を設定
 dnl
 
