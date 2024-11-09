@@ -36,6 +36,11 @@ Include (${COMMON_CMAKE_DIR}/TargetSystem.cmake)
 
 ##----------------------------------------------------------------
 ##
+##    プロジェクトの基本設定。
+##
+
+##----------------------------------------------------------------
+##
 ##    デフォルトのコンパイルオプション。
 ##
 
@@ -56,11 +61,6 @@ set(CMAKE_C_FLAGS_DEBUG         "${CMAKE_C_FLAGS_DEBUG}   -D_DEBUG")
 
 # set(CMAKE_CXX_FLAGS_RELEASE     "${CMAKE_CXX_FLAGS_RELEASE} -DNDEBUG")
 # set(CMAKE_C_FLAGS_RELEASE       "${CMAKE_C_FLAGS_RELEASE}   -DNDEBUG")
-
-##----------------------------------------------------------------
-##
-##    プロジェクトの基本設定。
-##
 
 enable_testing()
 
