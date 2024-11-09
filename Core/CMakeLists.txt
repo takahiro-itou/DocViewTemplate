@@ -69,6 +69,26 @@ Include(${COMMON_CMAKE_DIR}/ConfigDirectory.cmake)
 ##    ビルド環境の検査。
 ##
 
+##
+##    Check Programs.
+##
+
+##
+##    Check Header Files.
+##
+
+##
+##    Check Libraries.
+##
+
+##
+##    Check Types.
+##
+
+##
+##    Check Extra Compiler/Linker Options.
+##
+
 Include (${COMMON_CMAKE_DIR}/EnableCxx11.cmake)
 
 Include (${COMMON_CMAKE_DIR}/CheckConstExpr.cmake)
