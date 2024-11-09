@@ -20,6 +20,20 @@ set(serial              "0.0.0")
 
 project(${PROJECT_NAME}     VERSION  1.0.0)
 
+
+##
+##
+##
+
+set(COMMON_CMAKE_DIR        "${PROJECT_SOURCE_DIR}/.CMake")
+
+##
+##    ターゲットシステムを判定
+##
+
+Include (${COMMON_CMAKE_DIR}/TargetSystem.cmake)
+
+
 ##----------------------------------------------------------------
 ##
 ##    デフォルトのコンパイルオプション。
@@ -50,7 +64,6 @@ set(CMAKE_C_FLAGS_DEBUG         "${CMAKE_C_FLAGS_DEBUG}   -D_DEBUG")
 
 enable_testing()
 
-set(COMMON_CMAKE_DIR        "${PROJECT_SOURCE_DIR}/.CMake")
 set(INCTOP_DIR_NAME         "Include")
 set(BINTOP_DIR_NAME         "Bin")
 set(LIBTOP_DIR_NAME         "Lib")
