@@ -97,14 +97,6 @@ Include (${COMMON_CMAKE_DIR}/CheckOverride.cmake)
 
 ##----------------------------------------------------------------
 ##
-##    インクルードパスの設定。
-##
-
-include_directories("${PROJECT_SOURCE_DIR}/Include")
-include_directories("${PROJECT_BINARY_DIR}/Include")
-
-##----------------------------------------------------------------
-##
 ##    Additional Packages.
 ##    外部ライブラリ。
 ##
