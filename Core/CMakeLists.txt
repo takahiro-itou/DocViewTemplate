@@ -46,8 +46,6 @@ Include (${COMMON_CMAKE_DIR}/TargetSystem.cmake)
 
 Include (${COMMON_CMAKE_DIR}/DefaultCompileOptions.cmake)
 
-enable_testing()
-
 set(INCTOP_DIR_NAME         "Include")
 set(BINTOP_DIR_NAME         "Bin")
 set(LIBTOP_DIR_NAME         "Lib")
