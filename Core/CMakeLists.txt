@@ -22,7 +22,7 @@ project(${PROJECT_NAME}     VERSION  1.0.0)
 
 
 ##
-##
+##    共通の .cmake ファイルの置いてある場所。
 ##
 
 set(COMMON_CMAKE_DIR        "${PROJECT_SOURCE_DIR}/.CMake")
@@ -39,12 +39,25 @@ Include (${COMMON_CMAKE_DIR}/TargetSystem.cmake)
 ##    プロジェクトの基本設定。
 ##
 
-##----------------------------------------------------------------
 ##
 ##    デフォルトのコンパイルオプション。
 ##
 
 Include (${COMMON_CMAKE_DIR}/DefaultCompileOptions.cmake)
+
+##
+##    Project Name Space.
+##
+
+set(SAMPLE_CNF_NAMESPACE    Sample)
+
+
+##----------------------------------------------------------------
+##
+##    ディレクトリ名。
+##
+
+Include(${COMMON_CMAKE_DIR}/ConfigDirectory.cmake)
 
 set(INCTOP_DIR_NAME         "Include")
 set(BINTOP_DIR_NAME         "Bin")
@@ -60,6 +73,7 @@ set(LIBTOP_BINARY_DIR       "${PROJECT_BINARY_DIR}/${LIBTOP_DIR_NAME}")
 set(INCLUDE_SOURCE_DIR      "${INCTOP_SOURCE_DIR}/${INCPKG_DIR_NAME}")
 set(INCLUDE_BINARY_DIR      "${INCTOP_BINARY_DIR}/${INCPKG_DIR_NAME}")
 
+
 ##----------------------------------------------------------------
 ##
 ##    ビルド環境の検査。
@@ -70,12 +84,6 @@ Include (${COMMON_CMAKE_DIR}/EnableCxx11.cmake)
 Include (${COMMON_CMAKE_DIR}/CheckConstExpr.cmake)
 Include (${COMMON_CMAKE_DIR}/CheckNullPtr.cmake)
 Include (${COMMON_CMAKE_DIR}/CheckOverride.cmake)
-
-##
-##    Project Name Space.
-##
-
-set(SAMPLE_CNF_NAMESPACE    Sample)
 
 ##----------------------------------------------------------------
 ##
