@@ -20,61 +20,30 @@ set(serial              "0.0.0")
 
 project(${PROJECT_NAME}     VERSION  1.0.0)
 
-##----------------------------------------------------------------
+
 ##
-##    デフォルトのコンパイルオプション。
+##    共通の .cmake ファイルの置いてある場所。
 ##
 
-If (NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE    Release)
-EndIf ()
+set(COMMON_CMAKE_DIR        "${PROJECT_SOURCE_DIR}/.CMake")
 
-message("Build Type = ${CMAKE_BUILD_TYPE}")
+##
+##    ターゲットシステムを判定
+##
 
-set(CXX_WARNING_FLAGS       "-Wall -Weffc++")
-set(C_WARNING_FLAGS         "-Wall")
+Include (${COMMON_CMAKE_DIR}/TargetSystem.cmake)
 
-set(CMAKE_CXX_FLAGS         "${CMAKE_CXX_FLAGS} ${CXX_WARNING_FLAGS}")
-set(CMAKE_C_FLAGS           "${CMAKE_C_FLAGS}   ${C_WARNING_FLAGS}")
-
-set(CMAKE_CXX_FLAGS_DEBUG       "${CMAKE_CXX_FLAGS_DEBUG} -D_DEBUG")
-set(CMAKE_C_FLAGS_DEBUG         "${CMAKE_C_FLAGS_DEBUG}   -D_DEBUG")
-
-# set(CMAKE_CXX_FLAGS_RELEASE     "${CMAKE_CXX_FLAGS_RELEASE} -DNDEBUG")
-# set(CMAKE_C_FLAGS_RELEASE       "${CMAKE_C_FLAGS_RELEASE}   -DNDEBUG")
 
 ##----------------------------------------------------------------
 ##
 ##    プロジェクトの基本設定。
 ##
 
-enable_testing()
-
-set(COMMON_CMAKE_DIR        "${PROJECT_SOURCE_DIR}/.CMake")
-set(INCTOP_DIR_NAME         "Include")
-set(BINTOP_DIR_NAME         "Bin")
-set(LIBTOP_DIR_NAME         "Lib")
-set(INCPKG_DIR_NAME         "${PROJECT_NAME}")
-set(PACKAGE_INCLUDE_DIR     "${INCTOP_DIR_NAME}/${INCPKG_DIR_NAME}")
-
-set(INCTOP_SOURCE_DIR       "${PROJECT_SOURCE_DIR}/${INCTOP_DIR_NAME}")
-set(INCTOP_BINARY_DIR       "${PROJECT_BINARY_DIR}/${INCTOP_DIR_NAME}")
-set(LIBTOP_SOURCE_DIR       "${PROJECT_SOURCE_DIR}/${LIBTOP_DIR_NAME}")
-set(LIBTOP_BINARY_DIR       "${PROJECT_BINARY_DIR}/${LIBTOP_DIR_NAME}")
-
-set(INCLUDE_SOURCE_DIR      "${INCTOP_SOURCE_DIR}/${INCPKG_DIR_NAME}")
-set(INCLUDE_BINARY_DIR      "${INCTOP_BINARY_DIR}/${INCPKG_DIR_NAME}")
-
-##----------------------------------------------------------------
 ##
-##    ビルド環境の検査。
+##    デフォルトのコンパイルオプション。
 ##
 
-Include (${COMMON_CMAKE_DIR}/EnableCxx11.cmake)
-
-Include (${COMMON_CMAKE_DIR}/CheckConstExpr.cmake)
-Include (${COMMON_CMAKE_DIR}/CheckNullPtr.cmake)
-Include (${COMMON_CMAKE_DIR}/CheckOverride.cmake)
+Include (${COMMON_CMAKE_DIR}/DefaultCompileOptions.cmake)
 
 ##
 ##    Project Name Space.
@@ -82,13 +51,49 @@ Include (${COMMON_CMAKE_DIR}/CheckOverride.cmake)
 
 set(SAMPLE_CNF_NAMESPACE    Sample)
 
+
 ##----------------------------------------------------------------
 ##
-##    インクルードパスの設定。
+##    ディレクトリ名。
 ##
 
-include_directories("${PROJECT_SOURCE_DIR}/Include")
-include_directories("${PROJECT_BINARY_DIR}/Include")
+set(INCTOP_DIR_NAME         "Include")
+set(BINTOP_DIR_NAME         "Bin")
+set(LIBTOP_DIR_NAME         "Lib")
+
+Include(${COMMON_CMAKE_DIR}/ConfigDirectory.cmake)
+
+
+##----------------------------------------------------------------
+##
+##    ビルド環境の検査。
+##
+
+##
+##    Check Programs.
+##
+
+##
+##    Check Header Files.
+##
+
+##
+##    Check Libraries.
+##
+
+##
+##    Check Types.
+##
+
+##
+##    Check Extra Compiler/Linker Options.
+##
+
+Include (${COMMON_CMAKE_DIR}/EnableCxx11.cmake)
+
+Include (${COMMON_CMAKE_DIR}/CheckConstExpr.cmake)
+Include (${COMMON_CMAKE_DIR}/CheckNullPtr.cmake)
+Include (${COMMON_CMAKE_DIR}/CheckOverride.cmake)
 
 ##----------------------------------------------------------------
 ##
