@@ -30,6 +30,7 @@ jobs:
           pushd Core
           ls -alR
           popd
+        shell : bash
 
       - name : Install CppUnit
         id   : install-cppunit
