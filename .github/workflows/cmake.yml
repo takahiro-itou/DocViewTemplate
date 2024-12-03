@@ -32,6 +32,7 @@ jobs:
       - name: Run bootstrap
         run : |
           pwd
+          ls -aR
           cd Core
           autoconf --version
           ./bootstrap.sh
