@@ -19,9 +19,18 @@ jobs:
         with-cppunit : [ no, tools/cppunit ]
 
     steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: 'true'
+      - name : Checkout
+        uses : actions/checkout@v4
+        with :
+          submodules : recursive
+
+      - name : Print Directory
+        run  : |
+          pwd
+          pushd Core
+          ls -alR
+          popd
+        shell : bash
 
       - name : Install CppUnit
         id   : install-cppunit
@@ -32,11 +41,11 @@ jobs:
       - name: Run bootstrap
         run : |
           pwd
-          ls -aR
           cd Core
           autoconf --version
           ./bootstrap.sh
-          ls -aR
+          ls -alR
+        shell : bash
 
       - name: Configure CMake
         run : |
