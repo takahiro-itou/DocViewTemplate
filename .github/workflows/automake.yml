@@ -19,9 +19,17 @@ jobs:
         with-cppunit : [ no, tools/cppunit ]
 
     steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: 'true'
+      - name : Checkout
+        uses : actions/checkout@v4
+        with :
+          submodules : recursive
+
+      - name : Print Directory
+        run  : |
+          pwd
+          pushd Core
+          ls -alR
+          popd
 
       - name : Install CppUnit
         id   : install-cppunit
@@ -33,10 +41,10 @@ jobs:
         run : |
           pwd
           cd Core
-          ls -aR
+          ls -alR
           autoconf --version
           ./bootstrap.sh
-          ls -aR
+          ls -alR
         shell : bash
 
       - name: Run configrue
