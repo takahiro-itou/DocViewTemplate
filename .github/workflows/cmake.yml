@@ -19,9 +19,18 @@ jobs:
         with-cppunit : [ no, tools/cppunit ]
 
     steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: 'true'
+      - name : Checkout
+        uses : actions/checkout@v4
+        with :
+          submodules : recursive
+
+      - name : Print Directory
+        run  : |
+          pwd
+          pushd Core
+          ls -alR
+          popd
+        shell : bash
 
       - name : Install CppUnit
         id   : install-cppunit
@@ -29,16 +38,18 @@ jobs:
         with :
           install-prefix : "${{ matrix.with-cppunit }}"
 
-      - name: Run bootstrap
-        run : |
+      - name : Run bootstrap
+        run  : |
           pwd
-          cd Core
+          pushd Core
           autoconf --version
           ./bootstrap.sh
-          ls -aR
+          ls -alR
+          popd
+        shell : bash
 
-      - name: Configure CMake
-        run : |
+      - name : Configure CMake
+        run  : |
           cmake --version
           cmake -B "${{ github.workspace }}/build"  \
             -DCMAKE_BUILD_TYPE=${{ matrix.build-type }}  \
@@ -46,14 +57,14 @@ jobs:
             -S Core
         shell : bash
 
-      - name: Build
-        run : |
+      - name : Build
+        run  : |
           cmake --build "${{ github.workspace }}/build"  \
           --config ${{ matrix.build-type }}
         shell : bash
 
-      - name: Run Test
-        run : |
+      - name : Run Test
+        run  : |
           ctest --build-config "${{ matrix.build-type }}"  \
             --test-dir $"${{ github.workspace }}/build"
         shell : bash
