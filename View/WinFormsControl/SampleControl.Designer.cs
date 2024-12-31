@@ -62,6 +62,7 @@
             resources.ApplyResources(btnRun, "btnRun");
             btnRun.Name = "btnRun";
             btnRun.UseVisualStyleBackColor = true;
+            btnRun.Click += btnRun_Click;
             //
             // btnClear
             //

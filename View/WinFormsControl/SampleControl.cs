@@ -37,6 +37,28 @@ namespace WinFormsControl
         }
 
         //----------------------------------------------------------------
+        /**   RunButtonClick イベント
+        **
+        **/
+        [Browsable(true)
+          , Description("実行ボタンがクリックされた時に発生します")
+          , Category("アクション")
+        ]
+        public event EventHandler<EventArgs> RunButtonClick;
+
+        //----------------------------------------------------------------
+        /**   イベントハンドラを呼び出すメソッド
+        **
+        **/
+        protected virtual void OnRunButtonClick(EventArgs e)
+        {
+            var eventHandler = OnRunButtonClick;
+            if (eventHandler != null) {
+                eventHandler(this, e);
+            }
+        }
+
+        //----------------------------------------------------------------
         /**   イベントハンドラ
         **
         **    「クリア」ボタンのクリックイベント
@@ -46,5 +68,16 @@ namespace WinFormsControl
             txtInput.Text = "";
             txtOutput.Text = "";
         }
+
+        //----------------------------------------------------------------
+        /**   イベントハンドラ
+        **
+        **    「実行」ボタンのクリックイベント
+        **/
+        private void btnRun_Click(object sender, EventArgs e)
+        {
+            OnRunButtonClick(e);
+        }
+
     }
 }
