@@ -34,6 +34,7 @@
             this.Label2 = new Label();
             this.txtOutput = new TextBox();
             this.btnRun = new Button();
+            this.btnClear = new Button();
             this.SuspendLayout();
             //
             // Label1
@@ -62,6 +63,12 @@
             btnRun.Name = "btnRun";
             btnRun.UseVisualStyleBackColor = true;
             //
+            // btnClear
+            //
+            resources.ApplyResources(btnClear, "btnClear");
+            btnClear.Name = "btnClear";
+            btnClear.UseVisualStyleBackColor = true;
+            //
             // SampleControl
             //
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -70,6 +77,7 @@
             this.Controls.Add(Label2);
             this.Controls.Add(txtOutput);
             this.Controls.Add(btnRun);
+            this.Controls.Add(btnClear);
             resources.ApplyResources(this, "$this");
             this.Name = "SampleControl";
             this.ResumeLayout(false);
@@ -83,5 +91,6 @@
         private Label Label2;
         private TextBox txtOutput;
         private Button btnRun;
+        private Button btnClear;
     }
 }
