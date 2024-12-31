@@ -44,7 +44,7 @@ namespace WinFormsControl
           , Description("実行ボタンがクリックされた時に発生します")
           , Category("アクション")
         ]
-        public event EventHandler<EventArgs> RunButtonClick;
+        public event EventHandler<EventArgs>? RunButtonClick;
 
         //----------------------------------------------------------------
         /**   イベントハンドラを呼び出すメソッド
