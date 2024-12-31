@@ -10,6 +10,10 @@
         //----------------------------------------------------------------
         //    InputText プロパティ
         //
+        [Browsable(true)
+          , Description("入力テキストボックスに入力された文字列")
+          , Category("表示")
+        ]
         public String InputText
         {
             get { return txtInput.Text; }
@@ -19,6 +23,10 @@
         //----------------------------------------------------------------
         //    OutputText プロパティ
         //
+        [Browsable(true)
+          , Description("出力テキストボックスに表示する文字列")
+          , Category("表示")
+        ]
         public String OutputText
         {
             get { return txtOutput.Text; }
