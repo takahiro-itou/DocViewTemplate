@@ -120,7 +120,7 @@
     <value>0</value>
   </data>
   <data name="btnRun.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+    <value>Bottom</value>
   </data>
   <data name="btnRun.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 72</value>
