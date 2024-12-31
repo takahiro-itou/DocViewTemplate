@@ -63,7 +63,7 @@ namespace WinFormsControl
         **
         **    「クリア」ボタンのクリックイベント
         **/
-        private btnClear_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
             txtInput.Text = "";
             txtOutput.Text = "";
