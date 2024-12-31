@@ -35,5 +35,16 @@ namespace WinFormsControl
             get { return txtOutput.Text; }
             set { txtOutput.Text = value; }
         }
+
+        //----------------------------------------------------------------
+        /**   イベントハンドラ
+        **
+        **    「クリア」ボタンのクリックイベント
+        **/
+        private btnClear_Click(object sender, EventArgs e)
+        {
+            txtInput.Text = "";
+            txtOutput.Text = "";
+        }
     }
 }

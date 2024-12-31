@@ -68,6 +68,7 @@
             resources.ApplyResources(btnClear, "btnClear");
             btnClear.Name = "btnClear";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             //
             // SampleControl
             //
