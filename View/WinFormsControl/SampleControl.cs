@@ -52,7 +52,7 @@ namespace WinFormsControl
         **/
         protected virtual void OnRunButtonClick(EventArgs e)
         {
-            var eventHandler = OnRunButtonClick;
+            var eventHandler = RunButtonClick;
             if (eventHandler != null) {
                 eventHandler(this, e);
             }
