@@ -1,4 +1,7 @@
-﻿namespace WinFormsControl
+﻿
+using System.ComponentModel;
+
+namespace WinFormsControl
 {
     public partial class SampleControl : UserControl
     {
