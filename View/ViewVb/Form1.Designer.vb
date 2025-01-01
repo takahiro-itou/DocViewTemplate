@@ -28,6 +28,7 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.SampleControl1 = New WinFormsControl.SampleControl()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RunToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -36,7 +37,7 @@ Partial Class Form1
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        ' DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(22, 168)
@@ -45,7 +46,7 @@ Partial Class Form1
         Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
         Me.DataGridView1.TabIndex = 0
         '
-        'Label1
+        ' Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(22, 50)
@@ -54,14 +55,14 @@ Partial Class Form1
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Label1"
         '
-        'TextBox1
+        ' TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(81, 50)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(332, 23)
         Me.TextBox1.TabIndex = 2
         '
-        'Button1
+        ' Button1
         '
         Me.Button1.Location = New System.Drawing.Point(22, 93)
         Me.Button1.Name = "Button1"
@@ -70,7 +71,7 @@ Partial Class Form1
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'MenuStrip1
+        ' MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.RunToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
@@ -79,41 +80,56 @@ Partial Class Form1
         Me.MenuStrip1.TabIndex = 4
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'OpenFileDialog1
+        ' OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'FileToolStripMenuItem
+        ' FileToolStripMenuItem
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "&File"
         '
-        'ExitToolStripMenuItem
+        ' ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
-        'RunToolStripMenuItem
+        ' RunToolStripMenuItem
         '
         Me.RunToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CountToolStripMenuItem})
         Me.RunToolStripMenuItem.Name = "RunToolStripMenuItem"
         Me.RunToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
         Me.RunToolStripMenuItem.Text = "&Run"
         '
-        'CountToolStripMenuItem
+        ' CountToolStripMenuItem
         '
         Me.CountToolStripMenuItem.Name = "CountToolStripMenuItem"
         Me.CountToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CountToolStripMenuItem.Text = "&Count"
         '
-        'Form1
+        ' SampleControl1
+        '
+        SampleControl1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        SampleControl1.Font = New Font("ＭＳ ゴシック", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        SampleControl1.InputText = ""
+        SampleControl1.Location = New Point(16, 40)
+        SampleControl1.MaximumSize = New Size(0, 104)
+        SampleControl1.MinimumSize = New Size(256, 104)
+        SampleControl1.Name = "SampleControl1"
+        SampleControl1.OutputText = ""
+        SampleControl1.Size = New Size(400, 104)
+        SampleControl1.TabIndex = 5
+
+        '
+        ' Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(516, 349)
+        Me.ClientSize = New System.Drawing.Size(432, 345)
+        Me.Controls.Add(SampleControl1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
@@ -140,4 +156,5 @@ Partial Class Form1
     Friend WithEvents RunToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CountToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents SampleControl1 As WinFormsControl.SampleControl
 End Class
