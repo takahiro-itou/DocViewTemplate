@@ -40,99 +40,81 @@ Partial Class Form1
         '
         ' mnuMain
         '
-        resources.ApplyResources(mnuMain, "mnuMain")
+        resources.ApplyResources(Me.mnuMain, "mnuMain")
         Me.mnuMain.Items.AddRange(New ToolStripItem() {mnuFile, mnuRun})
         Me.mnuMain.Name = "mnuMain"
         '
         ' mnuFile
         '
-        resources.ApplyResources(mnuFile, "mnuFile")
+        resources.ApplyResources(Me.mnuFile, "mnuFile")
         Me.mnuFile.DropDownItems.AddRange(New ToolStripItem() {mnuFileExit})
         Me.mnuFile.Name = "mnuFilem"
         '
         ' mnuFileExit
         '
-        resources.ApplyResources(mnuFileExit, "mnuFileExit")
+        resources.ApplyResources(Me.mnuFileExit, "mnuFileExit")
         Me.mnuFileExit.Name = "mnuFileExit"
         '
         ' mnuRun
         '
-        resources.ApplyResources(mnuRun, "mnuRun")
+        resources.ApplyResources(Me.mnuRun, "mnuRun")
         Me.mnuRun.DropDownItems.AddRange(New ToolStripItem() {mnuRunCount})
         Me.mnuRun.Name = "mnuRun"
         '
         ' mnuRunCount
         '
-        resources.ApplyResources(mnuRunCount, "mnuRunCount")
+        resources.ApplyResources(Me.mnuRunCount, "mnuRunCount")
         Me.mnuRunCount.Name = "mnuRunCount"
 
         '
         ' DataGridView1
         '
+        resources.ApplyResources(Me.DataGridView1, "DataGridView1")
         Me.DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(22, 168)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
-        Me.DataGridView1.TabIndex = 0
         '
         ' Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(22, 50)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(41, 15)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Label1"
         '
         ' TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(81, 50)
+        resources.ApplyResources(Me.TextBox1, "TextBox1")
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(332, 23)
-        Me.TextBox1.TabIndex = 2
         '
         ' Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(22, 93)
+        resources.ApplyResources(Me.Button1, "Button1")
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(110, 31)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
         ' OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        resources.ApplyResources(Me.OpenFileDialog1, "OpenFileDialog1")
         '
         ' SampleControl1
         '
-        SampleControl1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        SampleControl1.Font = New Font("ＭＳ ゴシック", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        resources.ApplyResources(SampleControl1, "SampleControl1")
         SampleControl1.InputText = ""
-        SampleControl1.Location = New Point(16, 40)
-        SampleControl1.MaximumSize = New Size(0, 104)
-        SampleControl1.MinimumSize = New Size(256, 104)
         SampleControl1.Name = "SampleControl1"
         SampleControl1.OutputText = ""
-        SampleControl1.Size = New Size(400, 104)
-        SampleControl1.TabIndex = 5
 
         '
         ' Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = AutoScaleMode.None
-        Me.ClientSize = New System.Drawing.Size(432, 345)
         Me.Controls.Add(Me.SampleControl1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
+        Me.Controls.Add(Me.mnuMain)
+        Me.MainMenuStrip = Me.mnuMain
         Me.Name = "Form1"
-        Me.Text = "Form1"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
