@@ -22,24 +22,24 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.DataGridView1 = New DataGridView()
+        Me.Label1 = New Label()
+        Me.TextBox1 = New TextBox()
+        Me.Button1 = New Button()
+        Me.MenuStrip1 = New MenuStrip()
+        Me.OpenFileDialog1 = New OpenFileDialog()
         Me.SampleControl1 = New WinFormsControl.SampleControl()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RunToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FileToolStripMenuItem = New ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New ToolStripMenuItem()
+        Me.RunToolStripMenuItem = New ToolStripMenuItem()
+        Me.CountToolStripMenuItem = New ToolStripMenuItem()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         ' DataGridView1
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(22, 168)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 25
@@ -73,7 +73,7 @@ Partial Class Form1
         '
         ' MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.RunToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New ToolStripItem() {Me.FileToolStripMenuItem, Me.RunToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(516, 24)
@@ -86,7 +86,7 @@ Partial Class Form1
         '
         ' FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "&File"
@@ -99,7 +99,7 @@ Partial Class Form1
         '
         ' RunToolStripMenuItem
         '
-        Me.RunToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CountToolStripMenuItem})
+        Me.RunToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {Me.CountToolStripMenuItem})
         Me.RunToolStripMenuItem.Name = "RunToolStripMenuItem"
         Me.RunToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
         Me.RunToolStripMenuItem.Text = "&Run"
@@ -127,7 +127,7 @@ Partial Class Form1
         ' Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = AutoScaleMode.None
         Me.ClientSize = New System.Drawing.Size(432, 345)
         Me.Controls.Add(SampleControl1)
         Me.Controls.Add(Me.Button1)
