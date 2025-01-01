@@ -25,9 +25,6 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
 
         Me.DataGridView1 = New DataGridView()
-        Me.Label1 = New Label()
-        Me.TextBox1 = New TextBox()
-        Me.Button1 = New Button()
         Me.mnuMain = New MenuStrip()
         Me.mnuFile = New ToolStripMenuItem()
         Me.mnuFileExit = New ToolStripMenuItem()
