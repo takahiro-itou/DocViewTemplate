@@ -12,10 +12,6 @@ Private Sub RunCount(ByVal message As String)
     MsgBox(outText, MsgBoxStyle.OkOnly)
 End Sub
 
-Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-    RunCount(TextBox1.Text)
-End Sub
-
 Private Sub mnuFileExit_Click(sender As Object, e As EventArgs) Handles _
             mnuFileExit.Click
 ''--------------------------------------------------------------------
@@ -29,7 +25,7 @@ Private Sub mnuRunCount_Click(sender As Object, e As EventArgs) Handles _
 ''--------------------------------------------------------------------
 ''    メニュー「実行」－「カウント」
 ''--------------------------------------------------------------------
-    RunCount(TextBox1.Text)
+    RunCount(SampleControl1.InputText)
 End Sub
 
 Private Sub SampleControl1_RunButtonClick(sender As Object, e As EventArgs) _

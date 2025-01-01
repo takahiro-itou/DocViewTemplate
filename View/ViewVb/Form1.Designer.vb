@@ -76,26 +76,11 @@ Partial Class Form1
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 25
         '
-        ' Label1
-        '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.Name = "Label1"
-        '
-        ' TextBox1
-        '
-        resources.ApplyResources(Me.TextBox1, "TextBox1")
-        Me.TextBox1.Name = "TextBox1"
-        '
-        ' Button1
-        '
-        resources.ApplyResources(Me.Button1, "Button1")
-        Me.Button1.Name = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         ' OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         resources.ApplyResources(Me.OpenFileDialog1, "OpenFileDialog1")
+
         '
         ' SampleControl1
         '
@@ -110,9 +95,6 @@ Partial Class Form1
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = AutoScaleMode.None
         Me.Controls.Add(Me.SampleControl1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.mnuMain)
         Me.MainMenuStrip = Me.mnuMain
@@ -126,9 +108,6 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
     Friend WithEvents mnuMain As MenuStrip
     Friend WithEvents mnuFile As ToolStripMenuItem
     Friend WithEvents mnuFileExit As ToolStripMenuItem

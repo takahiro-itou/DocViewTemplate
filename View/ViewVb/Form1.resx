@@ -82,31 +82,6 @@
     <value>Main View</value>
   </data>
 
-  <data name="&gt;&gt;Button1.Name" xml:space="preserve">
-    <value>Button1</value>
-  </data>
-  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Button1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 93</value>
-  </data>
-  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 31</value>
-  </data>
-  <data name="Button1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="Button1.Text" xml:space="preserve">
-    <value>Button1</value>
-  </data>
-
   <data name="&gt;&gt;DataGridView1.Name" xml:space="preserve">
     <value>DataGridView1</value>
   </data>
@@ -129,111 +104,83 @@
     <value>0</value>
   </data>
 
-  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
+  <data name="&gt;&gt;mnuFile.Name" xml:space="preserve">
+    <value>mnuFile</value>
   </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;mnuFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 50</value>
-  </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 12</value>
-  </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Label1</value>
-  </data>
-
-  <data name="FileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="mnuFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 20</value>
   </data>
-  <data name="FileToolStripMenuItem.Text" xml:space="preserve">
+  <data name="mnuFile.Text" xml:space="preserve">
     <value>&amp;File</value>
   </data>
-  <data name="&gt;&gt;FileToolStripMenuItem.Name" xml:space="preserve">
-    <value>FileToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;FileToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
 
-  <data name="&gt;&gt;ExitToolStripMenuItem.Name" xml:space="preserve">
-    <value>ExitToolStripMenuItem</value>
+  <data name="&gt;&gt;mnuFileExit.Name" xml:space="preserve">
+    <value>mnuFileExit</value>
   </data>
-  <data name="&gt;&gt;ExitToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;mnuFileExit.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ExitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="mnuFileExit.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 22</value>
   </data>
-  <data name="ExitToolStripMenuItem.Text" xml:space="preserve">
+  <data name="mnuFileExit.Text" xml:space="preserve">
     <value>E&amp;xit</value>
   </data>
 
-  <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="mnuMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="&gt;&gt;MenuStrip1.Name" xml:space="preserve">
-    <value>MenuStrip1</value>
+  <data name="&gt;&gt;mnuMain.Name" xml:space="preserve">
+    <value>mnuMain</value>
   </data>
-  <data name="&gt;&gt;MenuStrip1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;mnuMain.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;MenuStrip1.Type" xml:space="preserve">
+  <data name="&gt;&gt;mnuMain.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MenuStrip1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;mnuMain.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="MenuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="mnuMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="MenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="mnuMain.Size" type="System.Drawing.Size, System.Drawing">
     <value>432, 24</value>
   </data>
-  <data name="MenuStrip1.TabIndex" type="System.Int32, mscorlib">
+  <data name="mnuMain.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="MenuStrip1.Text" xml:space="preserve">
-    <value>MenuStrip1</value>
+  <data name="mnuMain.Text" xml:space="preserve">
+    <value>mnuMain</value>
   </data>
 
-  <data name="&gt;&gt;RunToolStripMenuItem.Name" xml:space="preserve">
-    <value>RunToolStripMenuItem</value>
+  <data name="&gt;&gt;mnuRun.Name" xml:space="preserve">
+    <value>mnuRun</value>
   </data>
-  <data name="&gt;&gt;RunToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;mnuRun.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="RunToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="mnuRun.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 20</value>
   </data>
-  <data name="RunToolStripMenuItem.Text" xml:space="preserve">
+  <data name="mnuRun.Text" xml:space="preserve">
     <value>&amp;Run</value>
   </data>
 
-  <data name="&gt;&gt;CountToolStripMenuItem.Name" xml:space="preserve">
-    <value>CountToolStripMenuItem</value>
+  <data name="&gt;&gt;mnuRunCount.Name" xml:space="preserve">
+    <value>mnuRunCount</value>
   </data>
-  <data name="&gt;&gt;CountToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;mnuRunCount.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="CountToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="mnuRunCount.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 22</value>
   </data>
-  <data name="CountToolStripMenuItem.Text" xml:space="preserve">
+  <data name="mnuRunCount.Text" xml:space="preserve">
     <value>&amp;Count</value>
   </data>
 
@@ -279,28 +226,6 @@
   </data>
   <data name="SampleControl1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
-  </data>
-
-  <data name="&gt;&gt;TextBox1.Name" xml:space="preserve">
-    <value>TextBox1</value>
-  </data>
-  <data name="&gt;&gt;TextBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TextBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TextBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="TextBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 50</value>
-  </data>
-  <data name="TextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>332, 19</value>
-  </data>
-  <data name="TextBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
   </data>
 
 </root>
