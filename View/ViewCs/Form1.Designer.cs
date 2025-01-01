@@ -49,7 +49,7 @@ partial class Form1
         this.Button1.TabIndex = 7;
         this.Button1.Text = "Button1";
         this.Button1.UseVisualStyleBackColor = true;
-        this.Button1.Click += new System.EventHandler(this.Button1_Click);
+        this.Button1.Click += this.Button1_Click;
         //
         // TextBox1
         //
@@ -80,7 +80,7 @@ partial class Form1
         this.SampleControl1.InputText = "";
         this.SampleControl1.Name = "SampleControl1";
         this.SampleControl1.OutputText = "";
-        this.SampleControl1.RunButtonClick += new System.EventHandler(this.SampleControl1_RunButtonClick);
+        this.SampleControl1.RunButtonClick += this.SampleControl1_RunButtonClick;
 
         //
         // Form1
