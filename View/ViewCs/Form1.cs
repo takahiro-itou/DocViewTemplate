@@ -21,11 +21,6 @@ public partial class Form1 : Form
         MessageBox.Show(outText);
     }
 
-    private void Button1_Click(object sender, EventArgs e)
-    {
-        runCount(SampleControl1.InputText);
-    }
-
     private void SampleControl1_RunButtonClick(object sender, EventArgs e)
     {
         runCount(SampleControl1.InputText);
