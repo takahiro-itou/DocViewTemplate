@@ -86,7 +86,7 @@ partial class Form1
         //
         this.AutoScaleMode = AutoScaleMode.None;
         resources.ApplyResources(this, "$this");
-        this.Contents.Add(this.SampleControl1);
+        this.Controls.Add(this.SampleControl1);
         this.Controls.Add(this.Button1);
         this.Controls.Add(this.TextBox1);
         this.Controls.Add(this.Label1);
