@@ -247,6 +247,40 @@
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 
+  <data name="&gt;&gt;SampleControl1.Name" xml:space="preserve">
+    <value>SampleControl1</value>
+  </data>
+  <data name="&gt;&gt;SampleControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SampleControl1.Type" xml:space="preserve">
+    <value>WinFormsControl.SampleControl, WinFormsControl, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;SampleControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="SampleControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="SampleControl1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>ＭＳ ゴシック, 9pt</value>
+  </data>
+  <data name="SampleControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 40</value>
+  </data>
+  <data name="SampleControl1.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 104</value>
+  </data>
+  <data name="SampleControl1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>256, 104</value>
+  </data>
+  <data name="SampleControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 104</value>
+  </data>
+  <data name="SampleControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+
   <data name="&gt;&gt;TextBox1.Name" xml:space="preserve">
     <value>TextBox1</value>
   </data>
