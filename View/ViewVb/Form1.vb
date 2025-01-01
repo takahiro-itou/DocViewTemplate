@@ -2,11 +2,14 @@
 
 Private Sub RunCount(ByVal message As String)
     Dim result As Integer
+    Dim outText As String
     Dim objWrapper As SampleWrapper.Common.SampleDocument = New SampleWrapper.Common.SampleDocument()
 
     objWrapper.setMessage(message)
     result = objWrapper.countAlphabet()
-    MsgBox("入力した文字列中のアルファベットの個数は " & result, MsgBoxStyle.OkOnly)
+    outText = "入力した文字列中のアルファベットの個数は " & result
+    SampleControl1.OutputText = outText
+    MsgBox(outText, MsgBoxStyle.OkOnly)
 End Sub
 
 Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
