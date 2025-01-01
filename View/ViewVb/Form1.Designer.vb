@@ -22,6 +22,8 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+
         Me.DataGridView1 = New DataGridView()
         Me.Label1 = New Label()
         Me.TextBox1 = New TextBox()
@@ -35,7 +37,7 @@ Partial Class Form1
         Me.OpenFileDialog1 = New OpenFileDialog()
         Me.SampleControl1 = New WinFormsControl.SampleControl()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MenuStrip1.SuspendLayout()
+        Me.mnuMain.SuspendLayout()
         Me.SuspendLayout()
         '
         ' mnuMain
@@ -116,8 +118,8 @@ Partial Class Form1
         Me.MainMenuStrip = Me.mnuMain
         Me.Name = "Form1"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.mnuMain.ResumeLayout(False)
+        Me.mnuMain.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
