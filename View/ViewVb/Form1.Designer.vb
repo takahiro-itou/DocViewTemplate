@@ -66,13 +66,6 @@ Partial Class Form1
         Me.mnuRunCount.Name = "mnuRunCount"
 
         '
-        ' DataGridView1
-        '
-        resources.ApplyResources(Me.DataGridView1, "DataGridView1")
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 25
-        '
         ' OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
@@ -85,6 +78,13 @@ Partial Class Form1
         SampleControl1.InputText = ""
         SampleControl1.Name = "SampleControl1"
         SampleControl1.OutputText = ""
+        '
+        ' DataGridView1
+        '
+        resources.ApplyResources(Me.DataGridView1, "DataGridView1")
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 25
 
         '
         ' Form1
@@ -104,6 +104,7 @@ Partial Class Form1
 
     End Sub
 
+    Friend WithEvents SampleControl1 As WinFormsControl.SampleControl
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents mnuMain As MenuStrip
     Friend WithEvents mnuFile As ToolStripMenuItem
@@ -111,5 +112,5 @@ Partial Class Form1
     Friend WithEvents mnuRun As ToolStripMenuItem
     Friend WithEvents mnuRunCount As ToolStripMenuItem
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents SampleControl1 As WinFormsControl.SampleControl
+
 End Class
