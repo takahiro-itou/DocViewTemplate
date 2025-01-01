@@ -13,7 +13,7 @@
         RunCount(TextBox1.Text)
     End Sub
 
-    Private Sub CountToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CountToolStripMenuItem.Click
+    Private Sub mnuRunCount_Click(sender As Object, e As EventArgs) Handles mnuRunCount.Click
         RunCount(TextBox1.Text)
     End Sub
 End Class

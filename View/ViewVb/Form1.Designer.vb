@@ -26,16 +26,46 @@ Partial Class Form1
         Me.Label1 = New Label()
         Me.TextBox1 = New TextBox()
         Me.Button1 = New Button()
-        Me.MenuStrip1 = New MenuStrip()
+        Me.mnuMain = New MenuStrip()
+        Me.mnuFile = New ToolStripMenuItem()
+        Me.mnuFileExit = New ToolStripMenuItem()
+        Me.mnuRun = New ToolStripMenuItem()
+        Me.mnuRunCount = New ToolStripMenuItem()
+
         Me.OpenFileDialog1 = New OpenFileDialog()
         Me.SampleControl1 = New WinFormsControl.SampleControl()
-        Me.FileToolStripMenuItem = New ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New ToolStripMenuItem()
-        Me.RunToolStripMenuItem = New ToolStripMenuItem()
-        Me.CountToolStripMenuItem = New ToolStripMenuItem()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        ' mnuMain
+        '
+        resources.ApplyResources(mnuMain, "mnuMain")
+        Me.mnuMain.Items.AddRange(New ToolStripItem() {mnuFile, mnuRun})
+        Me.mnuMain.Name = "mnuMain"
+        '
+        ' mnuFile
+        '
+        resources.ApplyResources(mnuFile, "mnuFile")
+        Me.mnuFile.DropDownItems.AddRange(New ToolStripItem() {mnuFileExit})
+        Me.mnuFile.Name = "mnuFilem"
+        '
+        ' mnuFileExit
+        '
+        resources.ApplyResources(mnuFileExit, "mnuFileExit")
+        Me.mnuFileExit.Name = "mnuFileExit"
+        '
+        ' mnuRun
+        '
+        resources.ApplyResources(mnuRun, "mnuRun")
+        Me.mnuRun.DropDownItems.AddRange(New ToolStripItem() {mnuRunCount})
+        Me.mnuRun.Name = "mnuRun"
+        '
+        ' mnuRunCount
+        '
+        resources.ApplyResources(mnuRunCount, "mnuRunCount")
+        Me.mnuRunCount.Name = "mnuRunCount"
+
         '
         ' DataGridView1
         '
@@ -71,44 +101,9 @@ Partial Class Form1
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        ' MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New ToolStripItem() {Me.FileToolStripMenuItem, Me.RunToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(516, 24)
-        Me.MenuStrip1.TabIndex = 4
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
         ' OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
-        ' FileToolStripMenuItem
-        '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {Me.ExitToolStripMenuItem})
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "&File"
-        '
-        ' ExitToolStripMenuItem
-        '
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ExitToolStripMenuItem.Text = "E&xit"
-        '
-        ' RunToolStripMenuItem
-        '
-        Me.RunToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {Me.CountToolStripMenuItem})
-        Me.RunToolStripMenuItem.Name = "RunToolStripMenuItem"
-        Me.RunToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
-        Me.RunToolStripMenuItem.Text = "&Run"
-        '
-        ' CountToolStripMenuItem
-        '
-        Me.CountToolStripMenuItem.Name = "CountToolStripMenuItem"
-        Me.CountToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.CountToolStripMenuItem.Text = "&Count"
         '
         ' SampleControl1
         '
@@ -150,11 +145,11 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RunToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CountToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents mnuMain As MenuStrip
+    Friend WithEvents mnuFile As ToolStripMenuItem
+    Friend WithEvents mnuFileExit As ToolStripMenuItem
+    Friend WithEvents mnuRun As ToolStripMenuItem
+    Friend WithEvents mnuRunCount As ToolStripMenuItem
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents SampleControl1 As WinFormsControl.SampleControl
 End Class
