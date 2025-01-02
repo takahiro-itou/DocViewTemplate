@@ -26,6 +26,9 @@
   <ItemGroup Condition=" '$(TargetFramework)' == 'net48' ">
     <ProjectReference Include="..\Cli.NetFramework4.8\Wrapper.Net48.vcxproj" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WinFormsControl\WinFormsControl.csproj" />
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Update="My Project\Application.Designer.vb">
