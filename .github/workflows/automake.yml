@@ -1,15 +1,9 @@
 
 name: CI for Core
 
-on:
-  push:
-    branches: [ "master", "develop" ]
-  pull_request:
-    branches: [ "master", "develop" ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
+jobs :
+  build :
+    runs-on : ubuntu-latest
 
     strategy :
       fail-fast : false
@@ -18,7 +12,7 @@ jobs:
         build-type   : [ release, debug ]
         with-cppunit : [ no, tools/cppunit ]
 
-    steps:
+    steps :
       - name : Checkout
         uses : actions/checkout@v4
         with :
@@ -38,8 +32,8 @@ jobs:
         with :
           install-prefix : "${{ matrix.with-cppunit }}"
 
-      - name: Run bootstrap
-        run : |
+      - name : Run bootstrap
+        run  : |
           pwd
           pushd Core
           autoconf --version
@@ -48,8 +42,8 @@ jobs:
           popd
         shell : bash
 
-      - name: Run configrue
-        run : |
+      - name : Run configrue
+        run  : |
           mkdir -p build
           pushd build
           ../Core/run-autoconf-${{ matrix.build-type }}  \
@@ -59,17 +53,23 @@ jobs:
           cppunit_dir : ${{ steps.install-cppunit.outputs.real-install-dir }}
         shell : bash
 
-      - name: Build
-        run : cd build && make
+      - name : Build
+        run  : cd build && make
 
-      - name: Run Test
-        run : cd build && make check
+      - name : Run Test
+        run  : cd build && make check
 
-      - name: make distcheck
-        run : |
+      - name : make distcheck
+        run  : |
           cd build
           env DISTCHECK_CONFIGURE_FLAGS="--with-cppunit=${cppunit_dir}"  \
             make distcheck
         env :
           cppunit_dir : ${{ steps.install-cppunit.outputs.real-install-dir }}
         shell : bash
+
+on :
+  push :
+    branches : [ "master", "develop" ]
+  pull_request :
+    branches : [ "master", "develop" ]
