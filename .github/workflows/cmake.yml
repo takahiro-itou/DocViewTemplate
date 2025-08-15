@@ -1,15 +1,9 @@
 
 name: CMake
 
-on:
-  push:
-    branches: [ "master", "develop" ]
-  pull_request:
-    branches: [ "master", "develop" ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
+jobs :
+  build :
+    runs-on : ubuntu-latest
 
     strategy :
       fail-fast : false
@@ -68,3 +62,10 @@ jobs:
           ctest --build-config "${{ matrix.build-type }}"  \
             --test-dir $"${{ github.workspace }}/build"
         shell : bash
+
+on :
+  push :
+    branches : [ "master", "develop" ]
+  pull_request :
+    branches : [ "master", "develop" ]
+  workflow_dispatch :
