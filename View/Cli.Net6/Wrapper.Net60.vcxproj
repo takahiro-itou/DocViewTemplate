@@ -28,6 +28,11 @@
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <TargetFramework>net6.0-windows</TargetFramework>
   </PropertyGroup>
+  <ItemGroup>
+    <KnownAppHostPack Update="@(KnownAppHostPack)">
+      <AppHostPackVersion Condition="'%(TargetFramework)' == 'net6.0-windows'">EXISTINGVERSION</AppHostPackVersion>
+    </KnownAppHostPack>
+  </ItemGroup>
 
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
 
