@@ -9,7 +9,7 @@ EndProject
 
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wrapper.Net48", "Cli.NetFramework4.8\Wrapper.Net48.vcxproj", "{39572160-04E9-4F8F-BA9F-422747AD772F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wrapper.Net80", "Cli.Net6\Wrapper.Net80.vcxproj", "{4869195C-1E29-42CF-9FB5-52CE89AC49B1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wrapper.Net80", "Cli.Net8\Wrapper.Net80.vcxproj", "{4869195C-1E29-42CF-9FB5-52CE89AC49B1}"
 EndProject
 
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsControl", "WinFormsControl\WinFormsControl.csproj", "{58D5A5EA-55FA-43CA-B205-7B1312FE1A79}"
