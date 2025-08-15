@@ -3,13 +3,13 @@
 
   <PropertyGroup>
     <TargetFrameworks>
-      net6.0-windows;
-      net48;
+      net8.0-windows;
     </TargetFrameworks>
     <LangVersion>10.0</LangVersion>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>WinFormsControl</RootNamespace>
   </PropertyGroup>
 
 </Project>

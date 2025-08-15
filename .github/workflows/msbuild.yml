@@ -2,11 +2,11 @@
 name : MSBuild
 
 env :
-  SOLUTION_FILE_PATH : View
+  SOLUTION_FILE_PATH : View\SampleView.sln
 
 jobs :
   build :
-    runs-on : windows-2022
+    runs-on : windows-latest
 
     strategy :
       fail-fast : false
