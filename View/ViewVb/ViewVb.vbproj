@@ -4,7 +4,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFrameworks>
-      net6.0-windows;
+      net8.0-windows;
       net48;
     </TargetFrameworks>
     <StartupObject>ViewVb.My.MyApplication</StartupObject>
