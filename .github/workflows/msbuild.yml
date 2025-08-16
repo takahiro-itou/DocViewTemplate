@@ -15,9 +15,10 @@ jobs :
         build-type   : [ Release, Debug ]
 
     steps :
-      - uses : actions/checkout@v4
+      - name : Checkout
+        uses : actions/checkout@v4
         with :
-          submodules : 'true'
+          submodules : recursive
 
       - name : Setup MSBuild
         uses : microsoft/setup-msbuild@v2

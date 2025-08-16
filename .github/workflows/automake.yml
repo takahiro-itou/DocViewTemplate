@@ -1,5 +1,5 @@
 
-name: CI for AutoMake
+name : CI for AutoMake
 
 jobs :
   build :
@@ -55,9 +55,11 @@ jobs :
 
       - name : Build
         run  : cd build && make
+        shell : bash
 
       - name : Run Test
         run  : cd build && make check
+        shell : bash
 
       - name : make distcheck
         run  : |
