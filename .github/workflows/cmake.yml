@@ -1,5 +1,5 @@
 
-name: CMake
+name: CI for CMake
 
 jobs :
   build :

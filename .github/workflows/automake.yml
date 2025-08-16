@@ -1,5 +1,5 @@
 
-name: CI for Core
+name: CI for AutoMake
 
 jobs :
   build :
