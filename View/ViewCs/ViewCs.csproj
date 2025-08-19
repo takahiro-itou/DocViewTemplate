@@ -2,16 +2,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFrameworks>
-      net8.0-windows;
-    </TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>10.0</LangVersion>
     <Nullable>enable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>WinExe</OutputType>
     <Platforms>AnyCPU;x64;Win32</Platforms>
     <RootNamespace>ViewCs</RootNamespace>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net8.0-windows' ">
