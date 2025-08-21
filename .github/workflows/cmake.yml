@@ -1,5 +1,5 @@
 
-name: CMake
+name : CI for CMake
 
 jobs :
   build :
@@ -12,7 +12,7 @@ jobs :
         build-type   : [ Release, Debug ]
         with-cppunit : [ no, tools/cppunit ]
 
-    steps:
+    steps :
       - name : Checkout
         uses : actions/checkout@v4
         with :
