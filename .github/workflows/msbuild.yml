@@ -2,7 +2,7 @@
 name : MSBuild
 
 env :
-  SOLUTION_FILE_PREFIX : View\SampleView
+  SOLUTION_FILE_PREFIX : SampleView
 
 jobs :
   build :
@@ -32,7 +32,7 @@ jobs :
         shell : pwsh
 
       - name : Build
-        working-directory : ${{ github.workspace }}
+        working-directory : "${{ github.workspace }}\View"
         run  : >
           msbuild -restore -t:Rebuild -p:Platform=x64 -p:Configuration="${{ matrix.build-type }}" "${{ env.solution-file }}"
         env  :
