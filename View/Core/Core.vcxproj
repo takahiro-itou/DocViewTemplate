@@ -51,11 +51,10 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
   </ImportGroup>
 
-  <PropertyGroup Label="UserMacros" />
-  <PropertyGroup>
-    <IntDir>$(Platform)\$(Configuration)\</IntDir>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  <PropertyGroup Label="UserMacros">
   </PropertyGroup>
+
+  <Import Project="..\Props\OutputLibs.props" />
 
   <ItemDefinitionGroup>
     <ClCompile>
