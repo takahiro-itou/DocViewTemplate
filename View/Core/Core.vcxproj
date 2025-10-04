@@ -4,10 +4,10 @@
   <Import Project="..\Props\ProjectConfigs.props" />
 
   <PropertyGroup Label="Globals">
-    <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{64D47941-C76A-4448-BAE1-62DE0B4C8AC5}</ProjectGuid>
     <RootNamespace>Core</RootNamespace>
+    <VCProjectVersion>16.0</VCProjectVersion>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
 
@@ -56,6 +56,16 @@
 
   <Import Project="..\Props\OutputLibs.props" />
   <Import Project="..\Props\OutputCommon.props" />
+
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <SDLCheck>true</SDLCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
 
   <Import Project="..\Props\Definitions.props" />
   <Import Project="..\Props\BuildOptions.props" />
