@@ -5,11 +5,6 @@ syntax: regexp
 ^\.git/
 ^\.gitmodules
 ^Core/\.git
-^Core/Lib/Tests/.git
-
-^Core/\.CMake/\.git
-^Core/\.M4/\.git
-^Core/\.hgtags
 
 subinclude:Core/.hgignore
 subinclude:View/.hgignore
