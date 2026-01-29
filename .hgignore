@@ -3,7 +3,8 @@ syntax: glob
 
 syntax: regexp
 ^\.git/
-^Core/Lib/Tests/.git
+^\.gitmodules
+^Core/\.git
 
 subinclude:Core/.hgignore
 subinclude:View/.hgignore
