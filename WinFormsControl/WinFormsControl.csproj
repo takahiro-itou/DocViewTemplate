@@ -6,14 +6,14 @@
     <LangVersion>10.0</LangVersion>
     <Nullable>enable</Nullable>
     <RootNamespace>WinFormsControl</RootNamespace>
-    <TargetFrameworks>
-      net48;
-    </TargetFrameworks>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net48' ">
-    <ProjectReference Include="..\Cli.NetFramework4.8\Wrapper.Net48.vcxproj" />
+  <Import Project="..\Props\OutputLibs.props" />
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cli.Net8\Wrapper.Net80.vcxproj" />
   </ItemGroup>
 
 </Project>
