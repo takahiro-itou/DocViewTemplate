@@ -6,17 +6,21 @@
     <LangVersion>10.0</LangVersion>
     <Nullable>enable</Nullable>
     <OutputType>WinExe</OutputType>
-    <Platforms>AnyCPU;x64;Win32</Platforms>
+    <Platforms>x64;Win32</Platforms>
     <RootNamespace>ViewCs</RootNamespace>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFrameworks>
+      net48;
+    </TargetFrameworks>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net8.0-windows' ">
-    <ProjectReference Include="..\Cli.Net8\Wrapper.Net80.vcxproj" />
+  <Import Project="..\Props\OutputApps.props" />
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net48' ">
+    <ProjectReference Include="..\Cli.NetFramework4.8\Wrapper.Net48.vcxproj" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WinFormsControl\WinFormsControl.csproj" />
+    <ProjectReference Include="..\WinFormsControl\WinFormsControl.NetOld.csproj" />
   </ItemGroup>
 
 </Project>

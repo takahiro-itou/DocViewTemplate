@@ -1,11 +1,21 @@
 
 syntax: glob
+ipch/
+bin/
+obj/
+
+*.sdf
+*.suo
 
 syntax: regexp
 ^\.git/
 ^\.gitmodules
 ^Core/\.git
+^\.vs/
+
+^Bin/
+^Libs/
+^Objs/
 
 subinclude:Core/.hgignore
-subinclude:View/.hgignore
 
